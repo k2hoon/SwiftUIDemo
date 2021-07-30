@@ -159,12 +159,8 @@
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
 				68ACF9D226AB341400929157 /* ViewModifierView.swift */,
 				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
-				68372DE126B45AE2003B313A /* FontTestView.swift */,
-				68372DE326B45B0F003B313A /* FontWeightView.swift */,
-				68372DE526B46053003B313A /* Text+ViewModifier.swift */,
-				68372DE726B4612D003B313A /* FontDesignView.swift */,
-				68372DE926B46199003B313A /* FontTextStyle.swift */,
-				68372E1826B469A3003B313A /* Font+Custom.swift */,
+				68372E1A26B4750F003B313A /* Views */,
+				68372E1B26B4751F003B313A /* Util */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -236,6 +232,26 @@
 				68372E1026B464EF003B313A /* NotoSansKR-Regular.otf */,
 			);
 			path = Noto_Sans_KR;
+			sourceTree = "<group>";
+		};
+		68372E1A26B4750F003B313A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68372DE126B45AE2003B313A /* FontTestView.swift */,
+				68372DE326B45B0F003B313A /* FontWeightView.swift */,
+				68372DE726B4612D003B313A /* FontDesignView.swift */,
+				68372DE926B46199003B313A /* FontTextStyle.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68372E1B26B4751F003B313A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				68372DE526B46053003B313A /* Text+ViewModifier.swift */,
+				68372E1826B469A3003B313A /* Font+Custom.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
