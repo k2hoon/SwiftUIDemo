@@ -39,6 +39,8 @@
 		68372E1626B464EF003B313A /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68372E0F26B464EF003B313A /* NotoSansKR-Medium.otf */; };
 		68372E1726B464EF003B313A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68372E1026B464EF003B313A /* NotoSansKR-Regular.otf */; };
 		68372E1926B469A3003B313A /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68372E1826B469A3003B313A /* Font+Custom.swift */; };
+		683ABFDB26B925A200779E5B /* AlertViewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683ABFDA26B925A200779E5B /* AlertViewTextView.swift */; };
+		683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */; };
 		6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6890DE5626AF0D510047449C /* ListViewTestView.swift */; };
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
 /* End PBXBuildFile section */
@@ -99,6 +101,8 @@
 		68372E0F26B464EF003B313A /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		68372E1026B464EF003B313A /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		68372E1826B469A3003B313A /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		683ABFDA26B925A200779E5B /* AlertViewTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewTextView.swift; sourceTree = "<group>"; };
+		683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+UIAlert.swift"; sourceTree = "<group>"; };
 		6890DE5626AF0D510047449C /* ListViewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTestView.swift; sourceTree = "<group>"; };
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +163,7 @@
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
 				68ACF9D226AB341400929157 /* ViewModifierView.swift */,
 				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
+				683ABFDA26B925A200779E5B /* AlertViewTextView.swift */,
 				68372E1A26B4750F003B313A /* Views */,
 				68372E1B26B4751F003B313A /* Util */,
 			);
@@ -250,6 +255,7 @@
 			children = (
 				68372DE526B46053003B313A /* Text+ViewModifier.swift */,
 				68372E1826B469A3003B313A /* Font+Custom.swift */,
+				683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 				6822CA3725FE5CE000120D13 /* ContentView.swift in Sources */,
 				68372DE426B45B0F003B313A /* FontWeightView.swift in Sources */,
 				6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */,
+				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
 				68372DEA26B46199003B313A /* FontTextStyle.swift in Sources */,
 				68372DE826B4612D003B313A /* FontDesignView.swift in Sources */,
 				68372DE626B46053003B313A /* Text+ViewModifier.swift in Sources */,
 				68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */,
+				683ABFDB26B925A200779E5B /* AlertViewTextView.swift in Sources */,
 				68372DE226B45AE2003B313A /* FontTestView.swift in Sources */,
 				6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */,
 				68372E1926B469A3003B313A /* Font+Custom.swift in Sources */,
