@@ -10,24 +10,58 @@ import SwiftUI
 import UIKit
 
 extension View {
-    
-    func alert(isPresented: Binding<Bool>) -> some View {
-        AlertControl(isPresented, content: self)
+    func alert(isPresented: Binding<Bool>, _ field: AlertField) -> some View {
+        AlertControlView(isPresented, field: field, content: self)
     }
 }
 
-extension AlertControl {
-//    func setTint(color: UIColor) -> Void {
-//        //self.content.tint
-//    }
+
+extension AlertControlView {
+    // TODO: need to check setTint work.
+    //    func setTint(color: UIColor) -> Void {
+    //        self.content.tint
+    //    }
 }
-struct AlertControl<Content: View>: UIViewControllerRepresentable {
+
+struct AlertField {
+    var title: Title? = nil
+    var message: Message
+    var accept: String = "OK"
+    var cancel: String? = "Cancel"
+    var background: Background? = nil
+    var secondaryActionTitle: String? = nil
+    var action: (String?) -> Void
+    var secondaryAction: (() -> Void)? = nil
+    
+    struct Title {
+        var text: String
+        var color: UIColor
+    }
+    
+    struct Message {
+        var text: String
+        var color: UIColor
+    }
+    
+    struct Background {
+        var color: UIColor
+        var alpha: CGFloat
+    }
+    
+    func setAction() -> Void {
+        
+    }
+}
+
+struct AlertControlView<Content: View>: UIViewControllerRepresentable {
     
     @Binding var isPresented: Bool
+    private var field: AlertField
     private let content: Content
     
-    init(_ isPresented: Binding<Bool>, content: Content) {
+    init(_ isPresented: Binding<Bool>, field: AlertField, content: Content) {
         self._isPresented = isPresented
+        self.field = field
         self.content = content
     }
     
@@ -50,51 +84,60 @@ struct AlertControl<Content: View>: UIViewControllerRepresentable {
     //
     //    }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<AlertControl>) -> UIHostingController<Content> {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<AlertControlView>) -> UIHostingController<Content> {
         UIHostingController(rootView: self.content)
     }
     
-    func updateUIViewController(_ uiViewController: UIHostingController<Content>, context: UIViewControllerRepresentableContext<AlertControl>) {
+    func updateUIViewController(_ uiViewController: UIHostingController<Content>, context: UIViewControllerRepresentableContext<AlertControlView>) {
         uiViewController.rootView = self.content
         
         if isPresented && uiViewController.presentedViewController == nil {
+            let field = self.field
             
-            let alertViewController = UIAlertController(title: "Hello", message: "Test alert", preferredStyle: .alert)
-            // Change Background
-//            let background = alertViewController.view.subviews.last?.subviews.last
-//            background?.layer.cornerRadius = 10.0
-//            background?.backgroundColor = UIColor(Color.green)
             
-            if let bgView = alertViewController.view.subviews.first,
-               let groupView = bgView.subviews.first,
-               let contentView = groupView.subviews.first {
-                contentView.backgroundColor = UIColor(Color.black).withAlphaComponent(0.7)
+            let alertViewController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            
+            
+            if let background = field.background {
+                // Change Background
+                //            let background = alertViewController.view.subviews.last?.subviews.last
+                //            background?.layer.cornerRadius = 10.0
+                //            background?.backgroundColor = UIColor(Color.green)
+                
+                if let bgView = alertViewController.view.subviews.first,
+                   let groupView = bgView.subviews.first,
+                   let contentView = groupView.subviews.first {
+                    contentView.backgroundColor = background.color.withAlphaComponent(background.alpha)
+                }
             }
             
             // Change title
-            let title = "Hello"
-            let attributeTitle = NSMutableAttributedString(string: title)
-            attributeTitle.addAttributes(
-                [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 26)],
-                range: NSMakeRange(0, title.utf8.count))
-                                           
-            attributeTitle.addAttributes(
-                [NSAttributedString.Key.foregroundColor: UIColor.red],
-                range: NSMakeRange(0, title.utf8.count))
-
-            alertViewController.setValue(attributeTitle, forKey: "attributedTitle")
+            if let title = field.title {
+                let text = title.text
+                let attributeTitle = NSMutableAttributedString(string: text)
+                attributeTitle.addAttributes(
+                    [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 26)],
+                    range: NSMakeRange(0, text.utf8.count))
+                
+                attributeTitle.addAttributes(
+                    [NSAttributedString.Key.foregroundColor: title.color],
+                    range: NSMakeRange(0, text.utf8.count))
+                
+                alertViewController.setValue(attributeTitle, forKey: "attributedTitle")
+            }
             
             // Chage Message
-            let message = "Test alert"
-            let attributeMessage = NSMutableAttributedString(string: message)
+            let message = field.message
+            let text = message.text
+            let attributeMessage = NSMutableAttributedString(string: text)
             attributeMessage.addAttributes(
                 [NSAttributedString.Key.font: UIFont(name: "AvenirNextCondensed-HeavyItalic", size: 18)!],
-                range: NSMakeRange(0, message.utf8.count))
-                                           
+                range: NSMakeRange(0, text.utf8.count))
+            
             attributeMessage.addAttributes(
-                [NSAttributedString.Key.foregroundColor: UIColor.blue],
-                range: NSMakeRange(0, message.utf8.count))
-
+                [NSAttributedString.Key.foregroundColor: message.color],
+                range: NSMakeRange(0, text.utf8.count))
+            
             alertViewController.setValue(attributeMessage, forKey: "attributedMessage")
             
             
@@ -106,14 +149,12 @@ struct AlertControl<Content: View>: UIViewControllerRepresentable {
             //alertViewController.view.tintColor = UIColor.gray
             
             // Add Action
-            let action = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            action.setValue(UIColor.gray, forKey: "titleTextColor")
+            let action = UIAlertAction(title: field.accept, style: .default, handler: nil)
+            action.setValue(UIColor.blue, forKey: "titleTextColor")
             alertViewController.addAction(action)
             
             context.coordinator.alertController = alertViewController
             uiViewController.present(context.coordinator.alertController!, animated: true)
-            
-            
         }
         if !isPresented && uiViewController.presentedViewController == context.coordinator.alertController {
             uiViewController.dismiss(animated: true)
@@ -127,5 +168,4 @@ struct AlertControl<Content: View>: UIViewControllerRepresentable {
             self.alertController = controller
         }
     }
-    
 }
