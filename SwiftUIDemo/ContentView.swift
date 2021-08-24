@@ -9,32 +9,39 @@ import SwiftUI
 
 
 struct ContentView: View {
-    
-    @AppStorage("samplestring") var sampleString = "hello"
+    @State private var isWebLinkTestActive = false
     
     var body: some View {
-        GeometryReader { geometry in
-            HStack(spacing: 0) {
-                Text("Left")
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
-                    .frame(width: geometry.size.width * 0.33)
-                    .background(Color.yellow)
-                Text("Right")
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
-                    .frame(width: geometry.size.width * 0.67)
-                    .background(Color.orange)
+        NavigationView {
+            VStack {
+                Text("Hello. This is...")
+                    .font(.headline)
+                    .padding()
+                HStack {
+                    Text("""
+                    This is somethig to explain....
+                    """)
+                        .multilineTextAlignment(.leading)
+                }
+                .padding()
+                .font(.subheadline)
+                .foregroundColor(.secondary)
+                
+                Divider()
+                NavigationLink(
+                    destination: WebLinkTestView(),
+                    isActive: $isWebLinkTestActive,
+                    label: {
+                        Button(action: {
+                            self.isWebLinkTestActive.toggle()
+                        }, label: {
+                            Text("WebLinkTestView")
+                        })
+                        
+                    })
             }
         }
-        .frame(height: 50)
-        //            Text("AppStorage key value is \(sampleString)")
-        //                .padding()
-        //            Button(action: {
-        //                sampleString = "hello, world!"
-        //            }, label: {
-        //                Text("Button")
-        //            })
+        .navigationTitle("")
     }
     
 }
