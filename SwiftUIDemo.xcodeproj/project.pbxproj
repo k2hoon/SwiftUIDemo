@@ -12,6 +12,9 @@
 		6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132326D4D37700944E1E /* GeometryReaderTestView.swift */; };
 		6806132626D4D8F700944E1E /* WebView+Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132526D4D8F700944E1E /* WebView+Safari.swift */; };
 		6806132826D4DD8100944E1E /* WebView+WebKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132726D4DD8100944E1E /* WebView+WebKit.swift */; };
+		6806132A26D4EF4600944E1E /* AttributedStringTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132926D4EF4600944E1E /* AttributedStringTestView.swift */; };
+		6806132C26D4F77200944E1E /* Alert+TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132B26D4F77200944E1E /* Alert+TextField.swift */; };
+		6806132E26D4F92F00944E1E /* Alert+TextLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6806132D26D4F92F00944E1E /* Alert+TextLink.swift */; };
 		6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */; };
 		6822CA3725FE5CE000120D13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA3625FE5CE000120D13 /* ContentView.swift */; };
 		6822CA3925FE5CE100120D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6822CA3825FE5CE100120D13 /* Assets.xcassets */; };
@@ -57,6 +60,10 @@
 		6874037A26CFA05B00C44AB4 /* BottomSheetTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037926CFA05B00C44AB4 /* BottomSheetTestView2.swift */; };
 		6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6890DE5626AF0D510047449C /* ListViewTestView.swift */; };
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
+		68C5F3D526E2216B0096C5CD /* PicketTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D426E2216B0096C5CD /* PicketTestView.swift */; };
+		68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */; };
+		68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */; };
+		68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +89,9 @@
 		6806132326D4D37700944E1E /* GeometryReaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTestView.swift; sourceTree = "<group>"; };
 		6806132526D4D8F700944E1E /* WebView+Safari.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView+Safari.swift"; sourceTree = "<group>"; };
 		6806132726D4DD8100944E1E /* WebView+WebKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WebView+WebKit.swift"; sourceTree = "<group>"; };
+		6806132926D4EF4600944E1E /* AttributedStringTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringTestView.swift; sourceTree = "<group>"; };
+		6806132B26D4F77200944E1E /* Alert+TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+TextField.swift"; sourceTree = "<group>"; };
+		6806132D26D4F92F00944E1E /* Alert+TextLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+TextLink.swift"; sourceTree = "<group>"; };
 		6822CA3125FE5CE000120D13 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		6822CA3625FE5CE000120D13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -133,6 +143,10 @@
 		6874037926CFA05B00C44AB4 /* BottomSheetTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView2.swift; sourceTree = "<group>"; };
 		6890DE5626AF0D510047449C /* ListViewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTestView.swift; sourceTree = "<group>"; };
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
+		68C5F3D426E2216B0096C5CD /* PicketTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicketTestView.swift; sourceTree = "<group>"; };
+		68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
+		68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestView.swift; sourceTree = "<group>"; };
+		68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +199,6 @@
 			children = (
 				68372DEB26B462F9003B313A /* Fonts */,
 				6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */,
-				6822CA3625FE5CE000120D13 /* ContentView.swift */,
 				6822CA3825FE5CE100120D13 /* Assets.xcassets */,
 				6822CA3D25FE5CE100120D13 /* Info.plist */,
 				6874037526CF9DC300C44AB4 /* BottomSheetTestView.swift */,
@@ -195,11 +208,12 @@
 				68ACF9D226AB341400929157 /* ViewModifierView.swift */,
 				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
 				6806131F26D4A4E700944E1E /* RefreshListViewTest.swift */,
-				683ABFDA26B925A200779E5B /* AlertViewTextView.swift */,
-				6806132126D4D22100944E1E /* WebLinkTestView.swift */,
 				6806132326D4D37700944E1E /* GeometryReaderTestView.swift */,
+				6806132926D4EF4600944E1E /* AttributedStringTestView.swift */,
 				68372E1A26B4750F003B313A /* Views */,
 				68372E1B26B4751F003B313A /* Util */,
+				68C5F3D426E2216B0096C5CD /* PicketTestView.swift */,
+				68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -228,6 +242,41 @@
 				6822CA5325FE5CE100120D13 /* Info.plist */,
 			);
 			path = SwiftUIDemoUITests;
+			sourceTree = "<group>";
+		};
+		6824632B26EE381D00F31B5F /* AlertTest */ = {
+			isa = PBXGroup;
+			children = (
+				683ABFDA26B925A200779E5B /* AlertViewTextView.swift */,
+			);
+			path = AlertTest;
+			sourceTree = "<group>";
+		};
+		6824632C26EE388000F31B5F /* WebLinkTest */ = {
+			isa = PBXGroup;
+			children = (
+				6806132126D4D22100944E1E /* WebLinkTestView.swift */,
+			);
+			path = WebLinkTest;
+			sourceTree = "<group>";
+		};
+		6824632D26EE5B3B00F31B5F /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */,
+				6806132D26D4F92F00944E1E /* Alert+TextLink.swift */,
+				6806132B26D4F77200944E1E /* Alert+TextField.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		6824632E26EE5B4B00F31B5F /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				6806132526D4D8F700944E1E /* WebView+Safari.swift */,
+				6806132726D4DD8100944E1E /* WebView+WebKit.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		68372DEB26B462F9003B313A /* Fonts */ = {
@@ -276,10 +325,12 @@
 		68372E1A26B4750F003B313A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				68372DE126B45AE2003B313A /* FontTestView.swift */,
-				68372DE326B45B0F003B313A /* FontWeightView.swift */,
-				68372DE726B4612D003B313A /* FontDesignView.swift */,
-				68372DE926B46199003B313A /* FontTextStyle.swift */,
+				6822CA3625FE5CE000120D13 /* ContentView.swift */,
+				6824632C26EE388000F31B5F /* WebLinkTest */,
+				6824632B26EE381D00F31B5F /* AlertTest */,
+				68A5F5DF26E79E1200ED019A /* FontTest */,
+				68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */,
+				68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -289,10 +340,9 @@
 			children = (
 				68372DE526B46053003B313A /* Text+ViewModifier.swift */,
 				68372E1826B469A3003B313A /* Font+Custom.swift */,
-				683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */,
+				6824632D26EE5B3B00F31B5F /* Alerts */,
 				6874037426CF9B2200C44AB4 /* BottomSheet */,
-				6806132526D4D8F700944E1E /* WebView+Safari.swift */,
-				6806132726D4DD8100944E1E /* WebView+WebKit.swift */,
+				6824632E26EE5B4B00F31B5F /* WebView */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -308,6 +358,17 @@
 				6874037226CF9B0100C44AB4 /* ViewExtension.swift */,
 			);
 			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		68A5F5DF26E79E1200ED019A /* FontTest */ = {
+			isa = PBXGroup;
+			children = (
+				68372DE126B45AE2003B313A /* FontTestView.swift */,
+				68372DE326B45B0F003B313A /* FontWeightView.swift */,
+				68372DE726B4612D003B313A /* FontDesignView.swift */,
+				68372DE926B46199003B313A /* FontTextStyle.swift */,
+			);
+			path = FontTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -462,26 +523,33 @@
 				6822CA3725FE5CE000120D13 /* ContentView.swift in Sources */,
 				6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */,
 				6874036D26CF9ABA00C44AB4 /* BottomSheet.swift in Sources */,
+				6806132E26D4F92F00944E1E /* Alert+TextLink.swift in Sources */,
 				68372DE426B45B0F003B313A /* FontWeightView.swift in Sources */,
 				6874037326CF9B0100C44AB4 /* ViewExtension.swift in Sources */,
 				6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */,
 				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
+				6806132A26D4EF4600944E1E /* AttributedStringTestView.swift in Sources */,
 				68372DEA26B46199003B313A /* FontTextStyle.swift in Sources */,
+				68C5F3D526E2216B0096C5CD /* PicketTestView.swift in Sources */,
 				6806132226D4D22100944E1E /* WebLinkTestView.swift in Sources */,
+				68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */,
 				68372DE826B4612D003B313A /* FontDesignView.swift in Sources */,
 				6874037626CF9DC300C44AB4 /* BottomSheetTestView.swift in Sources */,
 				6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */,
 				6874036B26CF9A9C00C44AB4 /* RoundedCorner.swift in Sources */,
+				68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */,
 				6874037A26CFA05B00C44AB4 /* BottomSheetTestView2.swift in Sources */,
 				6874037826CFA03200C44AB4 /* BottomSheetTestView1.swift in Sources */,
 				6874036926CF9A8500C44AB4 /* EffectView.swift in Sources */,
 				68372DE626B46053003B313A /* Text+ViewModifier.swift in Sources */,
 				6874037126CF9AE200C44AB4 /* BottomSheetView.swift in Sources */,
 				68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */,
+				6806132C26D4F77200944E1E /* Alert+TextField.swift in Sources */,
 				6806132626D4D8F700944E1E /* WebView+Safari.swift in Sources */,
 				683ABFDB26B925A200779E5B /* AlertViewTextView.swift in Sources */,
 				6806132826D4DD8100944E1E /* WebView+WebKit.swift in Sources */,
 				68372DE226B45AE2003B313A /* FontTestView.swift in Sources */,
+				68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */,
 				6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */,
 				6806132026D4A4E700944E1E /* RefreshListViewTest.swift in Sources */,
 				68372E1926B469A3003B313A /* Font+Custom.swift in Sources */,

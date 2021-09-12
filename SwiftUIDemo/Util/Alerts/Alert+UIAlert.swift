@@ -89,14 +89,17 @@ struct AlertControlView<Content: View>: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIHostingController<Content>, context: UIViewControllerRepresentableContext<AlertControlView>) {
-        uiViewController.rootView = self.content
         
-        if isPresented && uiViewController.presentedViewController == nil {
+        guard context.coordinator.alertController == nil else {
+            return
+        }
+        //if isPresented && uiViewController.presentedViewController == nil {
+        if isPresented {
+            uiViewController.rootView = self.content
             let field = self.field
             
-            
-            let alertViewController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-            
+            let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+            context.coordinator.alertController = alertController
             
             if let background = field.background {
                 // Change Background
@@ -104,7 +107,7 @@ struct AlertControlView<Content: View>: UIViewControllerRepresentable {
                 //            background?.layer.cornerRadius = 10.0
                 //            background?.backgroundColor = UIColor(Color.green)
                 
-                if let bgView = alertViewController.view.subviews.first,
+                if let bgView = alertController.view.subviews.first,
                    let groupView = bgView.subviews.first,
                    let contentView = groupView.subviews.first {
                     contentView.backgroundColor = background.color.withAlphaComponent(background.alpha)
@@ -123,7 +126,7 @@ struct AlertControlView<Content: View>: UIViewControllerRepresentable {
                     [NSAttributedString.Key.foregroundColor: title.color],
                     range: NSMakeRange(0, text.utf8.count))
                 
-                alertViewController.setValue(attributeTitle, forKey: "attributedTitle")
+                alertController.setValue(attributeTitle, forKey: "attributedTitle")
             }
             
             // Chage Message
@@ -138,7 +141,7 @@ struct AlertControlView<Content: View>: UIViewControllerRepresentable {
                 [NSAttributedString.Key.foregroundColor: message.color],
                 range: NSMakeRange(0, text.utf8.count))
             
-            alertViewController.setValue(attributeMessage, forKey: "attributedMessage")
+            alertController.setValue(attributeMessage, forKey: "attributedMessage")
             
             
             // Add Action
@@ -151,14 +154,16 @@ struct AlertControlView<Content: View>: UIViewControllerRepresentable {
             // Add Action
             let action = UIAlertAction(title: field.accept, style: .default, handler: nil)
             action.setValue(UIColor.blue, forKey: "titleTextColor")
-            alertViewController.addAction(action)
+            alertController.addAction(action)
             
-            context.coordinator.alertController = alertViewController
-            uiViewController.present(context.coordinator.alertController!, animated: true)
-        }
-        if !isPresented && uiViewController.presentedViewController == context.coordinator.alertController {
-            uiViewController.dismiss(animated: true)
-        }
+            DispatchQueue.main.async {
+                uiViewController.present(alertController, animated: true) {
+                    isPresented = false
+                    context.coordinator.alertController = nil
+                }
+            }
+            
+        }        
     }
     
     class Coordinator: NSObject {
