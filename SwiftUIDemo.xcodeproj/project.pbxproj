@@ -389,7 +389,7 @@
 				6874037426CF9B2200C44AB4 /* BottomSheet */,
 				6824632E26EE5B4B00F31B5F /* WebView */,
 				6824632F26EE5DC800F31B5F /* AttributedString+Extension.swift */,
-				686D683226F2357A008F36D5 /* EnvironmentValues+ImageCache.swift */,
+				686D684826F2434F008F36D5 /* Cache */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -469,6 +469,14 @@
 				686D684426F24001008F36D5 /* CombineImageLoader.swift */,
 			);
 			path = ImageLoaders;
+			sourceTree = "<group>";
+		};
+		686D684826F2434F008F36D5 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				686D683226F2357A008F36D5 /* EnvironmentValues+ImageCache.swift */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		6874037426CF9B2200C44AB4 /* BottomSheet */ = {
