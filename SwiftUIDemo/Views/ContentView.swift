@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var isAttrStringTestActive = false
     @State private var isAlertTestActive = false
     @State private var isCombineTestActive = false
+    @State private var isCacheImageListActive = false
     
     var body: some View {
         NavigationView {
@@ -75,6 +76,19 @@ struct ContentView: View {
                             Text("CombineTest TestView")
                         })
                     })
+                
+                NavigationLink(
+                    destination: CombineListView(),
+                    isActive: $isCacheImageListActive,
+                    label: {
+                        Button(action: {
+                            self.isCacheImageListActive.toggle()
+                        }, label: {
+                            Text("Cache Image List TestView")
+                        })
+                    })
+                
+                
             }
         }
         .navigationTitle("")
