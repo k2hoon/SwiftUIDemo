@@ -40,7 +40,13 @@ struct ListViewTestView: View {
     ]
     @State private var multiSelection = Set<UUID>()
     
-    @State var items: [String] = ["Apples", "Oranges", "Bananas", "Pears", "Mangos", "Grapefruit"]
+    @State var items: [String] = ["Apples",
+                                  "Oranges",
+                                  "Bananas",
+                                  "Pears",
+                                  "Mangos",
+                                  "Grapefruit"]
+    
     @State var selections: [String] = []
     
     var body: some View {
