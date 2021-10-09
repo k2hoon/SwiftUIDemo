@@ -76,7 +76,7 @@
 		6874036D26CF9ABA00C44AB4 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874036C26CF9ABA00C44AB4 /* BottomSheet.swift */; };
 		6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874036E26CF9AD000C44AB4 /* BottomSheetPosition.swift */; };
 		6874037126CF9AE200C44AB4 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037026CF9AE200C44AB4 /* BottomSheetView.swift */; };
-		6874037326CF9B0100C44AB4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037226CF9B0100C44AB4 /* ViewExtension.swift */; };
+		6874037326CF9B0100C44AB4 /* BottomSheet+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037226CF9B0100C44AB4 /* BottomSheet+View.swift */; };
 		6874037626CF9DC300C44AB4 /* BottomSheetTestView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037526CF9DC300C44AB4 /* BottomSheetTestView1.swift */; };
 		6874037826CFA03200C44AB4 /* BottomSheetTestView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037726CFA03200C44AB4 /* BottomSheetTestView2.swift */; };
 		6874037A26CFA05B00C44AB4 /* BottomSheetTestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */; };
@@ -181,7 +181,7 @@
 		6874036C26CF9ABA00C44AB4 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		6874036E26CF9AD000C44AB4 /* BottomSheetPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetPosition.swift; sourceTree = "<group>"; };
 		6874037026CF9AE200C44AB4 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
-		6874037226CF9B0100C44AB4 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		6874037226CF9B0100C44AB4 /* BottomSheet+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BottomSheet+View.swift"; sourceTree = "<group>"; };
 		6874037526CF9DC300C44AB4 /* BottomSheetTestView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView1.swift; sourceTree = "<group>"; };
 		6874037726CFA03200C44AB4 /* BottomSheetTestView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView2.swift; sourceTree = "<group>"; };
 		6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView3.swift; sourceTree = "<group>"; };
@@ -245,8 +245,6 @@
 				6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */,
 				6822CA3825FE5CE100120D13 /* Assets.xcassets */,
 				6822CA3D25FE5CE100120D13 /* Info.plist */,
-				6874037726CFA03200C44AB4 /* BottomSheetTestView2.swift */,
-				6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */,
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
 				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
 				6806131F26D4A4E700944E1E /* RefreshListViewTest.swift */,
@@ -320,6 +318,17 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		6827FEE82712016C005D5839 /* BottomSheetViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				684A4D4C26FC8F3600BA61A0 /* BottomSheetTestView.swift */,
+				6874037526CF9DC300C44AB4 /* BottomSheetTestView1.swift */,
+				6874037726CFA03200C44AB4 /* BottomSheetTestView2.swift */,
+				6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */,
+			);
+			path = BottomSheetViewTest;
+			sourceTree = "<group>";
+		};
 		68372DEB26B462F9003B313A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,8 +387,7 @@
 				6824633126EE647600F31B5F /* DateFormatterView.swift */,
 				686D682426F1FF13008F36D5 /* VisualEffect */,
 				686D683126F23108008F36D5 /* ListViewTest */,
-				684A4D4C26FC8F3600BA61A0 /* BottomSheetTestView.swift */,
-				6874037526CF9DC300C44AB4 /* BottomSheetTestView1.swift */,
+				6827FEE82712016C005D5839 /* BottomSheetViewTest */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -493,7 +501,7 @@
 				6874036C26CF9ABA00C44AB4 /* BottomSheet.swift */,
 				6874036E26CF9AD000C44AB4 /* BottomSheetPosition.swift */,
 				6874037026CF9AE200C44AB4 /* BottomSheetView.swift */,
-				6874037226CF9B0100C44AB4 /* ViewExtension.swift */,
+				6874037226CF9B0100C44AB4 /* BottomSheet+View.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -670,7 +678,7 @@
 				686D683C26F23D1D008F36D5 /* URLCacheImageListView.swift in Sources */,
 				68372DE426B45B0F003B313A /* FontWeightView.swift in Sources */,
 				686D684526F24001008F36D5 /* CombineImageLoader.swift in Sources */,
-				6874037326CF9B0100C44AB4 /* ViewExtension.swift in Sources */,
+				6874037326CF9B0100C44AB4 /* BottomSheet+View.swift in Sources */,
 				6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */,
 				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
 				6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */,
