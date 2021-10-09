@@ -246,8 +246,6 @@
 				6822CA3825FE5CE100120D13 /* Assets.xcassets */,
 				6822CA3D25FE5CE100120D13 /* Info.plist */,
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
-				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
-				6806131F26D4A4E700944E1E /* RefreshListViewTest.swift */,
 				68372E1A26B4750F003B313A /* Views */,
 				68372E1B26B4751F003B313A /* Util */,
 				68C5F3D426E2216B0096C5CD /* PickerTestView.swift */,
@@ -419,6 +417,8 @@
 		686D683126F23108008F36D5 /* ListViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				6890DE5626AF0D510047449C /* ListViewTestView.swift */,
+				6806131F26D4A4E700944E1E /* RefreshListViewTest.swift */,
 				686D682D26F2266B008F36D5 /* AsyncContentsList.swift */,
 				686D683926F23CFD008F36D5 /* ImageList */,
 				686D683A26F23D07008F36D5 /* CacheImageList */,
