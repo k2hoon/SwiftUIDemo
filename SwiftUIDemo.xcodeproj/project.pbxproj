@@ -88,6 +88,8 @@
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
 		68C5F3D526E2216B0096C5CD /* PickerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D426E2216B0096C5CD /* PickerTestView.swift */; };
 		68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */; };
+		68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D330273AB8C40058BF98 /* NavigationTabView.swift */; };
+		68F7D334273ABAC90058BF98 /* NavigationLinkTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */; };
 		68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */; };
 		68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -197,6 +199,8 @@
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
 		68C5F3D426E2216B0096C5CD /* PickerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTestView.swift; sourceTree = "<group>"; };
 		68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
+		68F7D330273AB8C40058BF98 /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
+		68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkTestView.swift; sourceTree = "<group>"; };
 		68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestView.swift; sourceTree = "<group>"; };
 		68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -394,7 +398,7 @@
 				686D682426F1FF13008F36D5 /* VisualEffect */,
 				686D683126F23108008F36D5 /* ListViewTest */,
 				6827FEE82712016C005D5839 /* BottomSheetViewTest */,
-				683678DE271B35FA005433B0 /* NavigationTestView.swift */,
+				68F7D332273AB8CB0058BF98 /* NavigationViewTest */,
 				680BBBC927231B4200E61763 /* PathTestView.swift */,
 				68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */,
 			);
@@ -527,6 +531,16 @@
 				68372DE926B46199003B313A /* FontTextStyle.swift */,
 			);
 			path = FontTest;
+			sourceTree = "<group>";
+		};
+		68F7D332273AB8CB0058BF98 /* NavigationViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				683678DE271B35FA005433B0 /* NavigationTestView.swift */,
+				68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */,
+				68F7D330273AB8C40058BF98 /* NavigationTabView.swift */,
+			);
+			path = NavigationViewTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -709,6 +723,7 @@
 				684A4D4B26FC892700BA61A0 /* BlurEffectView.swift in Sources */,
 				686D681D26F1F8C4008F36D5 /* ImageListRowView.swift in Sources */,
 				686D682A26F1FFE3008F36D5 /* ShimmerListEmptyView.swift in Sources */,
+				68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */,
 				686D682C26F201E4008F36D5 /* ShimmerListContentsView.swift in Sources */,
 				686D682E26F2266B008F36D5 /* AsyncContentsList.swift in Sources */,
 				6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */,
@@ -726,6 +741,7 @@
 				684A4D4D26FC8F3600BA61A0 /* BottomSheetTestView.swift in Sources */,
 				68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */,
 				686D682126F1FC82008F36D5 /* ShimmeringView.swift in Sources */,
+				68F7D334273ABAC90058BF98 /* NavigationLinkTestView.swift in Sources */,
 				686D681F26F1F935008F36D5 /* ImageLoader.swift in Sources */,
 				6806132C26D4F77200944E1E /* Alert+TextField.swift in Sources */,
 				6806132626D4D8F700944E1E /* WebView+Safari.swift in Sources */,
