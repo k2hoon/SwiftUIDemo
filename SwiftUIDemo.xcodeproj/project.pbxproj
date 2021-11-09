@@ -90,6 +90,8 @@
 		68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */; };
 		68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D330273AB8C40058BF98 /* NavigationTabView.swift */; };
 		68F7D334273ABAC90058BF98 /* NavigationLinkTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */; };
+		68F7D336273ABF000058BF98 /* NavigationHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */; };
+		68F7D338273AC27F0058BF98 /* NavigationToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D337273AC27F0058BF98 /* NavigationToolbarView.swift */; };
 		68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */; };
 		68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -201,6 +203,8 @@
 		68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
 		68F7D330273AB8C40058BF98 /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
 		68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkTestView.swift; sourceTree = "<group>"; };
+		68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHiddenView.swift; sourceTree = "<group>"; };
+		68F7D337273AC27F0058BF98 /* NavigationToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationToolbarView.swift; sourceTree = "<group>"; };
 		68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestView.swift; sourceTree = "<group>"; };
 		68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -538,6 +542,8 @@
 			children = (
 				683678DE271B35FA005433B0 /* NavigationTestView.swift */,
 				68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */,
+				68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */,
+				68F7D337273AC27F0058BF98 /* NavigationToolbarView.swift */,
 				68F7D330273AB8C40058BF98 /* NavigationTabView.swift */,
 			);
 			path = NavigationViewTest;
@@ -706,6 +712,7 @@
 				68372DE426B45B0F003B313A /* FontWeightView.swift in Sources */,
 				686D684526F24001008F36D5 /* CombineImageLoader.swift in Sources */,
 				6874037326CF9B0100C44AB4 /* BottomSheet+View.swift in Sources */,
+				68F7D336273ABF000058BF98 /* NavigationHiddenView.swift in Sources */,
 				6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */,
 				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
 				6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */,
@@ -726,6 +733,7 @@
 				68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */,
 				686D682C26F201E4008F36D5 /* ShimmerListContentsView.swift in Sources */,
 				686D682E26F2266B008F36D5 /* AsyncContentsList.swift in Sources */,
+				68F7D338273AC27F0058BF98 /* NavigationToolbarView.swift in Sources */,
 				6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */,
 				686D682326F1FF03008F36D5 /* ShimmerListView.swift in Sources */,
 				6874036B26CF9A9C00C44AB4 /* RoundedCorner.swift in Sources */,
