@@ -1,13 +1,13 @@
 //
-//  NavigationTestView.swift
+//  NavigationTabView.swift
 //  SwiftUIDemo
 //
-//  Created by k2hoon on 2021/10/17.
+//  Created by k2hoon on 2021/11/09.
 //
 
 import SwiftUI
 
-struct NavigationTestView: View {
+struct NavigationTabView: View {
     enum Tab {
         case view1
         case view2
@@ -38,9 +38,9 @@ struct NavigationTestView: View {
     }
 }
 
-struct NavigationTestView_Previews: PreviewProvider {
+struct NavigationTabView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationTestView()
+        NavigationTabView()
     }
 }
 

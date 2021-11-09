@@ -9,9 +9,23 @@ import SwiftUI
 
 struct CombineTestView: View {
     @StateObject var viewModel = CombineViewModel()
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State private var counter = 0
     
     var body: some View {
         VStack {
+            Text("Hello, Combine!")
+                .onReceive(timer) { time in
+                    if self.counter == 5 {
+                        self.timer.upstream.connect().cancel()
+                    } else {
+                        self.counter += 1
+                    }                    
+                }
+            
+            Text("The timer counter is: \(counter)")
+            
+            
             Text("Hello, Combine!")
             Text("This is : \(self.viewModel.notified)")
             Button(action: {
