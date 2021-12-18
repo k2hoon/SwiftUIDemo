@@ -53,6 +53,8 @@
 		68372E1626B464EF003B313A /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68372E0F26B464EF003B313A /* NotoSansKR-Medium.otf */; };
 		68372E1726B464EF003B313A /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68372E1026B464EF003B313A /* NotoSansKR-Regular.otf */; };
 		68372E1926B469A3003B313A /* Font+Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68372E1826B469A3003B313A /* Font+Custom.swift */; };
+		6837FC51274C05CC0076A14D /* JsonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837FC50274C05CC0076A14D /* JsonView.swift */; };
+		6837FC53274C05F20076A14D /* JsonVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6837FC52274C05F20076A14D /* JsonVIewModel.swift */; };
 		683ABFDB26B925A200779E5B /* AlertViewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683ABFDA26B925A200779E5B /* AlertViewTextView.swift */; };
 		683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */; };
 		684A4D4B26FC892700BA61A0 /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684A4D4A26FC892700BA61A0 /* BlurEffectView.swift */; };
@@ -166,6 +168,8 @@
 		68372E0F26B464EF003B313A /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		68372E1026B464EF003B313A /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		68372E1826B469A3003B313A /* Font+Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Custom.swift"; sourceTree = "<group>"; };
+		6837FC50274C05CC0076A14D /* JsonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonView.swift; sourceTree = "<group>"; };
+		6837FC52274C05F20076A14D /* JsonVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonVIewModel.swift; sourceTree = "<group>"; };
 		683ABFDA26B925A200779E5B /* AlertViewTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewTextView.swift; sourceTree = "<group>"; };
 		683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+UIAlert.swift"; sourceTree = "<group>"; };
 		684A4D4A26FC892700BA61A0 /* BlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffectView.swift; sourceTree = "<group>"; };
@@ -405,6 +409,7 @@
 				68F7D332273AB8CB0058BF98 /* NavigationViewTest */,
 				680BBBC927231B4200E61763 /* PathTestView.swift */,
 				68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */,
+				6837FC54274C05F70076A14D /* JsonTest */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +428,15 @@
 				683678E0271B4578005433B0 /* NavigationView+View.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		6837FC54274C05F70076A14D /* JsonTest */ = {
+			isa = PBXGroup;
+			children = (
+				6837FC50274C05CC0076A14D /* JsonView.swift */,
+				6837FC52274C05F20076A14D /* JsonVIewModel.swift */,
+			);
+			path = JsonTest;
 			sourceTree = "<group>";
 		};
 		686D682426F1FF13008F36D5 /* VisualEffect */ = {
@@ -751,6 +765,7 @@
 				686D682126F1FC82008F36D5 /* ShimmeringView.swift in Sources */,
 				68F7D334273ABAC90058BF98 /* NavigationLinkTestView.swift in Sources */,
 				686D681F26F1F935008F36D5 /* ImageLoader.swift in Sources */,
+				6837FC53274C05F20076A14D /* JsonVIewModel.swift in Sources */,
 				6806132C26D4F77200944E1E /* Alert+TextField.swift in Sources */,
 				6806132626D4D8F700944E1E /* WebView+Safari.swift in Sources */,
 				683ABFDB26B925A200779E5B /* AlertViewTextView.swift in Sources */,
@@ -760,6 +775,7 @@
 				6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */,
 				683678E1271B4578005433B0 /* NavigationView+View.swift in Sources */,
 				6806132026D4A4E700944E1E /* RefreshListViewTest.swift in Sources */,
+				6837FC51274C05CC0076A14D /* JsonView.swift in Sources */,
 				68372E1926B469A3003B313A /* Font+Custom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
