@@ -25,6 +25,7 @@
 		6822CA5225FE5CE100120D13 /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA5125FE5CE100120D13 /* SwiftUIDemoUITests.swift */; };
 		6824633026EE5DC800F31B5F /* AttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6824632F26EE5DC800F31B5F /* AttributedString+Extension.swift */; };
 		6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6824633126EE647600F31B5F /* DateFormatterView.swift */; };
+		68321414276E5EC9003860CB /* SegmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68321413276E5EC9003860CB /* SegmentPickerView.swift */; };
 		683678DF271B35FA005433B0 /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683678DE271B35FA005433B0 /* NavigationTestView.swift */; };
 		683678E1271B4578005433B0 /* NavigationView+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683678E0271B4578005433B0 /* NavigationView+View.swift */; };
 		68372DE226B45AE2003B313A /* FontTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68372DE126B45AE2003B313A /* FontTestView.swift */; };
@@ -88,8 +89,6 @@
 		6874037A26CFA05B00C44AB4 /* BottomSheetTestView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */; };
 		6890DE5726AF0D510047449C /* ListViewTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6890DE5626AF0D510047449C /* ListViewTestView.swift */; };
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
-		68C5F3D526E2216B0096C5CD /* PickerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D426E2216B0096C5CD /* PickerTestView.swift */; };
-		68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */; };
 		68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D330273AB8C40058BF98 /* NavigationTabView.swift */; };
 		68F7D334273ABAC90058BF98 /* NavigationLinkTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */; };
 		68F7D336273ABF000058BF98 /* NavigationHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */; };
@@ -140,6 +139,7 @@
 		6822CA5325FE5CE100120D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6824632F26EE5DC800F31B5F /* AttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extension.swift"; sourceTree = "<group>"; };
 		6824633126EE647600F31B5F /* DateFormatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterView.swift; sourceTree = "<group>"; };
+		68321413276E5EC9003860CB /* SegmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentPickerView.swift; sourceTree = "<group>"; };
 		683678DE271B35FA005433B0 /* NavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
 		683678E0271B4578005433B0 /* NavigationView+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationView+View.swift"; sourceTree = "<group>"; };
 		68372DE126B45AE2003B313A /* FontTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTestView.swift; sourceTree = "<group>"; };
@@ -203,8 +203,6 @@
 		6874037926CFA05B00C44AB4 /* BottomSheetTestView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView3.swift; sourceTree = "<group>"; };
 		6890DE5626AF0D510047449C /* ListViewTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTestView.swift; sourceTree = "<group>"; };
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
-		68C5F3D426E2216B0096C5CD /* PickerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerTestView.swift; sourceTree = "<group>"; };
-		68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedPickerView.swift; sourceTree = "<group>"; };
 		68F7D330273AB8C40058BF98 /* NavigationTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTabView.swift; sourceTree = "<group>"; };
 		68F7D333273ABAC90058BF98 /* NavigationLinkTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLinkTestView.swift; sourceTree = "<group>"; };
 		68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHiddenView.swift; sourceTree = "<group>"; };
@@ -268,8 +266,6 @@
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
 				68372E1A26B4750F003B313A /* Views */,
 				68372E1B26B4751F003B313A /* Util */,
-				68C5F3D426E2216B0096C5CD /* PickerTestView.swift */,
-				68C5F3D626E221740096C5CD /* SegmentedPickerView.swift */,
 				686D682F26F229FE008F36D5 /* UserInfo.json */,
 			);
 			path = SwiftUIDemo;
@@ -410,6 +406,7 @@
 				680BBBC927231B4200E61763 /* PathTestView.swift */,
 				68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */,
 				6837FC54274C05F70076A14D /* JsonTest */,
+				68321413276E5EC9003860CB /* SegmentPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -731,9 +728,9 @@
 				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
 				6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */,
 				686D682826F1FF81008F36D5 /* ShimmerListViewModel.swift in Sources */,
+				68321414276E5EC9003860CB /* SegmentPickerView.swift in Sources */,
 				6806132A26D4EF4600944E1E /* AttributedStringTestView.swift in Sources */,
 				68372DEA26B46199003B313A /* FontTextStyle.swift in Sources */,
-				68C5F3D526E2216B0096C5CD /* PickerTestView.swift in Sources */,
 				6806132226D4D22100944E1E /* WebLinkTestView.swift in Sources */,
 				686D683526F23B2F008F36D5 /* CachedImageListView.swift in Sources */,
 				68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */,
@@ -751,7 +748,6 @@
 				6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */,
 				686D682326F1FF03008F36D5 /* ShimmerListView.swift in Sources */,
 				6874036B26CF9A9C00C44AB4 /* RoundedCorner.swift in Sources */,
-				68C5F3D726E221740096C5CD /* SegmentedPickerView.swift in Sources */,
 				686D684126F23F8A008F36D5 /* CombineListView.swift in Sources */,
 				683678DF271B35FA005433B0 /* NavigationTestView.swift in Sources */,
 				6874037A26CFA05B00C44AB4 /* BottomSheetTestView3.swift in Sources */,
