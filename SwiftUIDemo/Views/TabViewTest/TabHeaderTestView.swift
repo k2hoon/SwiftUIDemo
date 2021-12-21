@@ -55,31 +55,30 @@ struct TabHeaderTestView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("HeaderTabView Title")
         }
-        
     }
-}
+    
+    struct TabContentView1: View {
+        var body: some View {
+            ZStack {
+                Color.red200
+                    .ignoresSafeArea()
+                Text("TabContentView1")
+            }
+        }
+    }
 
-struct TabContentView1: View {
-    var body: some View {
-        ZStack {
-            Color.red200
-                .ignoresSafeArea()
-            Text("TabContentView1")
+    struct TabContentView2: View {
+        var body: some View {
+            ZStack {
+                Color.green300
+                    .ignoresSafeArea()
+                Text("TabContentView2")
+            }
         }
     }
 }
 
-struct TabContentView2: View {
-    var body: some View {
-        ZStack {
-            Color.green300
-                .ignoresSafeArea()
-            Text("TabContentView2")
-        }
-    }
-}
-
-struct TabHeaderViewTest_Previews: PreviewProvider {
+struct TabHeaderTestView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             TabHeaderTestView()
