@@ -45,9 +45,14 @@ struct SizeAwareViewModifier: ViewModifier {
     }
 }
 
-struct SegmentPicker: View {
+struct SegmentItem {
+    var title: String
+}
+
+struct SegmentPickerView: View {
     private let activeColor = Color(.tertiarySystemBackground)
-    private let backgroundColor = Color(.secondarySystemBackground)
+    //    private let backgroundColor = Color(.secondarySystemBackground)
+    private let backgroundColor = Color.clear
     private let shadowColor = Color.black.opacity(0.2)
     private let textColor = Color(.secondaryLabel)
     private let selectedTextColor = Color(.label)
@@ -79,7 +84,8 @@ struct SegmentPicker: View {
     
     @State private var size: CGSize = .zero // size of segment, used to create the active segment rect size
     
-    let items: [String]
+    //let items: [String]
+    let items: [SegmentItem]
     @Binding var selection: Int
     
     var body: some View {
@@ -90,7 +96,7 @@ struct SegmentPicker: View {
             
             HStack {
                 ForEach(0..<self.items.count, id: \.self) { index in
-                    self.getSegment(at: index)
+                    self.getSegmentButton(at: index)
                 }
             }
         }
@@ -104,13 +110,33 @@ struct SegmentPicker: View {
         CGFloat(self.selection) * (self.size.width + self.horizontalPadding / 2)
     }
     
-    // Gets text view for the segment
-    private func getSegment(at index: Int) -> some View {
+    // Gets button view for the segment
+    private func getSegmentButton(at index: Int) -> some View {
         guard index < self.items.count else {
             return EmptyView().eraseToAnyView()
         }
         
-        return Text(self.items[index])
+        return Button(action: {
+            self.selection = index
+        }) {
+            Text(self.items[index].title)
+                .foregroundColor(self.selection == index ? self.selectedTextColor: self.textColor)
+                .lineLimit(1)
+                .padding(.vertical, self.verticalPadding)
+                .padding(.horizontal, self.horizontalPadding)
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .modifier(SizeAwareViewModifier(viewSize: self.$size))
+        }
+        .eraseToAnyView()
+    }
+    
+    // Gets text view for the segment
+    private func getSegmentText(at index: Int) -> some View {
+        guard index < self.items.count else {
+            return EmptyView().eraseToAnyView()
+        }
+        
+        return Text(self.items[index].title)
             .foregroundColor(self.selection == index ? self.selectedTextColor: self.textColor)
             .lineLimit(1)
             .padding(.vertical, self.verticalPadding)
@@ -127,22 +153,5 @@ struct SegmentPicker: View {
         }
         
         self.selection = index
-    }
-    
-}
-
-struct SegmentPickerView: View {
-    @State private var selection = 0
-    private let items: [String] = ["A", "B", "C", "D", "E"]
-    
-    var body: some View {
-        SegmentPicker(items: self.items, selection: self.$selection)
-            .padding()
-    }
-}
-
-struct SegmentPickerView_Previews: PreviewProvider {
-    static var previews: some View {
-        SegmentPickerView()
     }
 }

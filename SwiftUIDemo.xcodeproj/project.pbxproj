@@ -19,6 +19,7 @@
 		68147E90272E8FCE0036EF55 /* TextFieldTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */; };
 		68149CDF2772165800CAEDA1 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68149CDE2772165800CAEDA1 /* ColorExtension.swift */; };
 		68149CE127721FCE00CAEDA1 /* TabHeaderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */; };
+		68149CE427722A2B00CAEDA1 /* SegmentPickerTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68149CE327722A2B00CAEDA1 /* SegmentPickerTestView.swift */; };
 		6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */; };
 		6822CA3725FE5CE000120D13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA3625FE5CE000120D13 /* ContentView.swift */; };
 		6822CA3925FE5CE100120D13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6822CA3825FE5CE100120D13 /* Assets.xcassets */; };
@@ -130,6 +131,7 @@
 		68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTestView.swift; sourceTree = "<group>"; };
 		68149CDE2772165800CAEDA1 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderTestView.swift; sourceTree = "<group>"; };
+		68149CE327722A2B00CAEDA1 /* SegmentPickerTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentPickerTestView.swift; sourceTree = "<group>"; };
 		6822CA3125FE5CE000120D13 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		6822CA3625FE5CE000120D13 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68149CE2277223A700CAEDA1 /* TabViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				68321415276E6B64003860CB /* TabHeaderView.swift */,
+				68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */,
+			);
+			path = TabViewTest;
+			sourceTree = "<group>";
+		};
+		68149CE527722AB300CAEDA1 /* PickerViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				68321413276E5EC9003860CB /* SegmentPickerView.swift */,
+				68149CE327722A2B00CAEDA1 /* SegmentPickerTestView.swift */,
+			);
+			path = PickerViewTest;
+			sourceTree = "<group>";
+		};
 		6822CA2825FE5CE000120D13 = {
 			isa = PBXGroup;
 			children = (
@@ -412,9 +432,8 @@
 				680BBBC927231B4200E61763 /* PathTestView.swift */,
 				68147E8F272E8FCE0036EF55 /* TextFieldTestView.swift */,
 				6837FC54274C05F70076A14D /* JsonTest */,
-				68321413276E5EC9003860CB /* SegmentPickerView.swift */,
-				68321415276E6B64003860CB /* TabHeaderView.swift */,
-				68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */,
+				68149CE527722AB300CAEDA1 /* PickerViewTest */,
+				68149CE2277223A700CAEDA1 /* TabViewTest */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -785,6 +804,7 @@
 				6837FC51274C05CC0076A14D /* JsonView.swift in Sources */,
 				68372E1926B469A3003B313A /* Font+Custom.swift in Sources */,
 				68149CDF2772165800CAEDA1 /* ColorExtension.swift in Sources */,
+				68149CE427722A2B00CAEDA1 /* SegmentPickerTestView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
