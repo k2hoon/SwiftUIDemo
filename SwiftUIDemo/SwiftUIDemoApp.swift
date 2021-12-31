@@ -15,7 +15,8 @@ struct SwiftUIDemoApp: App {
 //            NavigationTabView()
 //            JsonView()
 //            TabHeaderTestView()
-            SegmentPickerTestView()
+//            SegmentPickerTestView()
+            NavigationSearchTestView()
         }
     }
 }
