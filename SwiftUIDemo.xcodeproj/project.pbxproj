@@ -453,7 +453,7 @@
 				6837FC54274C05F70076A14D /* JsonTest */,
 				68149CE527722AB300CAEDA1 /* PickerViewTest */,
 				68149CE2277223A700CAEDA1 /* TabViewTest */,
-				68864AA1278218D30063A2A1 /* ScrollViewTestView.swift */,
+				68B8CCF62958B15A004ECB8E /* ScrollTest */,
 				6874866E278CA7F900DCAFEF /* ViewBuilderTest */,
 				68BF86DB27E2A36400119D93 /* LayoutTest */,
 			);
@@ -607,6 +607,14 @@
 				68372DE926B46199003B313A /* FontTextStyle.swift */,
 			);
 			path = FontTest;
+			sourceTree = "<group>";
+		};
+		68B8CCF62958B15A004ECB8E /* ScrollTest */ = {
+			isa = PBXGroup;
+			children = (
+				68864AA1278218D30063A2A1 /* ScrollViewTestView.swift */,
+			);
+			path = ScrollTest;
 			sourceTree = "<group>";
 		};
 		68BF86DB27E2A36400119D93 /* LayoutTest */ = {

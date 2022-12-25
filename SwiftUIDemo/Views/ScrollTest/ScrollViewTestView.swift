@@ -42,7 +42,7 @@ struct ScrollViewTestView: View {
                     }
                 }
                 
-                Button("Top") {
+                Button("Scroll to Top") {
                     withAnimation {
                         proxy.scrollTo(topID)
                     }
@@ -59,7 +59,7 @@ struct ScrollViewTestView: View {
     }
     
     func color(fraction: Double) -> Color {
-        Color(red: fraction, green: 1 - fraction, blue: 0.5)
+        Color(red: fraction, green: 1, blue: 1 - fraction)
     }
 }
 
