@@ -7,14 +7,38 @@
 
 import SwiftUI
 
-
 struct ContentView: View {
-    @State private var isWebLinkTestActive = false
-    @State private var isAttrStringTestActive = false
-    @State private var isAlertTestActive = false
-    @State private var isCombineTestActive = false
-    @State private var isCacheImageListActive = false
-    @State private var isCoreDataTestActive = false
+    enum ViewType: String, CaseIterable {
+        case webLink = "WebLink TestView"
+        case attributedString = "AttributedString test"
+        case alert = "AlertTestActive test"
+        case cacheImage = "Cache Image List test"
+        case combine = "CombineTest test"
+        case coreData = "Core Data test"
+        case json = "JSON test"
+        case segment = "Segment picker test"
+        case tab = "Tab header test"
+        case navigationTab = "Navigation tab test"
+        case navigationSearch = "Navigation search test"
+        case layout = "Layout test"
+                
+        func viewBuilder() -> AnyView {
+            switch self {
+            case .webLink: return AnyView(WebLinkTestView())
+            case .attributedString: return AnyView(AttributedStringTestView())
+            case .alert: return AnyView(AlertViewTextView())
+            case .cacheImage: return AnyView(CachedImageListView())
+            case .combine: return AnyView(CombineTestView())
+            case .coreData: return AnyView(CoreDataTestView())
+            case .json: return AnyView(JsonView())
+            case .segment: return AnyView(SegmentPickerTestView())
+            case .tab: return AnyView(TabHeaderTestView())
+            case .navigationTab: return AnyView(NavigationTabView())
+            case .navigationSearch: return AnyView(NavigationSearchTestView())
+            case .layout: return AnyView(LayoutTestView())
+            }
+        }
+    }
     
     var body: some View {
         NavigationView {
@@ -28,82 +52,22 @@ struct ContentView: View {
                     """)
                         .multilineTextAlignment(.leading)
                 }
-                .padding()
                 .font(.subheadline)
                 .foregroundColor(.secondary)
                 
                 Divider()
                 
-                NavigationLink(
-                    destination: WebLinkTestView(),
-                    isActive: $isWebLinkTestActive,
-                    label: {
-                        Button(action: {
-                            self.isWebLinkTestActive.toggle()
-                        }, label: {
-                            Text("WebLink TestView")
-                        })
-                    })
-                
-                NavigationLink(
-                    destination: AttributedStringTestView(),
-                    isActive: $isAttrStringTestActive,
-                    label: {
-                        Button(action: {
-                            self.isAttrStringTestActive.toggle()
-                        }, label: {
-                            Text("AttributedString TestView")
-                        })
-                    })
-                
-                NavigationLink(
-                    destination: AlertViewTextView(),
-                    isActive: $isAlertTestActive,
-                    label: {
-                        Button(action: {
-                            self.isAlertTestActive.toggle()
-                        }, label: {
-                            Text("AlertTestActive TestView")
-                        })
-                    })
-                
-                NavigationLink(
-                    destination: CombineTestView(),
-                    isActive: $isCombineTestActive,
-                    label: {
-                        Button(action: {
-                            self.isCombineTestActive.toggle()
-                        }, label: {
-                            Text("CombineTest TestView")
-                        })
-                    })
-                
-                NavigationLink(
-                    destination: CombineListView(),
-                    isActive: $isCacheImageListActive,
-                    label: {
-                        Button(action: {
-                            self.isCacheImageListActive.toggle()
-                        }, label: {
-                            Text("Cache Image List TestView")
-                        })
-                    })
-                
-                NavigationLink(
-                    destination: CoreDataTestView(),
-                    isActive: $isCoreDataTestActive,
-                    label: {
-                        Button(action: { self.isCoreDataTestActive.toggle() }) {
-                            Text("Core Data Test View")
+                List {
+                    ForEach(ViewType.allCases, id: \.self) { view in
+                        NavigationLink(view.rawValue) {
+                            view.viewBuilder()
                         }
-                    })
-                
-                
+                    }
+                }
             }
         }
         .navigationTitle("")
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
