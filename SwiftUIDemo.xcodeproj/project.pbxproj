@@ -64,6 +64,9 @@
 		683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */; };
 		684A4D4B26FC892700BA61A0 /* BlurEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684A4D4A26FC892700BA61A0 /* BlurEffectView.swift */; };
 		684A4D4D26FC8F3600BA61A0 /* BottomSheetTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 684A4D4C26FC8F3600BA61A0 /* BottomSheetTestView.swift */; };
+		686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 686437C0297083B300FA4C31 /* CoreDataTest.xcdatamodeld */; };
+		686437FF2970851300FA4C31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686437FE2970851300FA4C31 /* Persistence.swift */; };
+		686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686438002970852C00FA4C31 /* CoreDataTestView.swift */; };
 		686D681B26F1F8B2008F36D5 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681A26F1F8B2008F36D5 /* ImageListView.swift */; };
 		686D681D26F1F8C4008F36D5 /* ImageListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681C26F1F8C4008F36D5 /* ImageListRowView.swift */; };
 		686D681F26F1F935008F36D5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681E26F1F935008F36D5 /* ImageLoader.swift */; };
@@ -194,6 +197,9 @@
 		683ABFDC26B9271000779E5B /* Alert+UIAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alert+UIAlert.swift"; sourceTree = "<group>"; };
 		684A4D4A26FC892700BA61A0 /* BlurEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffectView.swift; sourceTree = "<group>"; };
 		684A4D4C26FC8F3600BA61A0 /* BottomSheetTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetTestView.swift; sourceTree = "<group>"; };
+		686437C1297083B300FA4C31 /* CoreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTest.xcdatamodel; sourceTree = "<group>"; };
+		686437FE2970851300FA4C31 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		686438002970852C00FA4C31 /* CoreDataTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestView.swift; sourceTree = "<group>"; };
 		686D681A26F1F8B2008F36D5 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		686D681C26F1F8C4008F36D5 /* ImageListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListRowView.swift; sourceTree = "<group>"; };
 		686D681E26F1F935008F36D5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -289,6 +295,7 @@
 		6822CA2825FE5CE000120D13 = {
 			isa = PBXGroup;
 			children = (
+				686437C0297083B300FA4C31 /* CoreDataTest.xcdatamodeld */,
 				6822CA3325FE5CE000120D13 /* SwiftUIDemo */,
 				6822CA4525FE5CE100120D13 /* SwiftUIDemoTests */,
 				6822CA5025FE5CE100120D13 /* SwiftUIDemoUITests */,
@@ -463,6 +470,7 @@
 				6874866E278CA7F900DCAFEF /* ViewBuilderTest */,
 				68BF86DB27E2A36400119D93 /* LayoutTest */,
 				68B8CCFD2958B599004ECB8E /* ZoomTest */,
+				68D610E82972F82F00275E11 /* CoreDataTest */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -652,6 +660,15 @@
 			path = NavigationSearchTest;
 			sourceTree = "<group>";
 		};
+		68D610E82972F82F00275E11 /* CoreDataTest */ = {
+			isa = PBXGroup;
+			children = (
+				686437FE2970851300FA4C31 /* Persistence.swift */,
+				686438002970852C00FA4C31 /* CoreDataTestView.swift */,
+			);
+			path = CoreDataTest;
+			sourceTree = "<group>";
+		};
 		68F7D332273AB8CB0058BF98 /* NavigationViewTest */ = {
 			isa = PBXGroup;
 			children = (
@@ -818,6 +835,8 @@
 				6822CA3725FE5CE000120D13 /* ContentView.swift in Sources */,
 				686D683726F23B61008F36D5 /* CachedImageListRowView.swift in Sources */,
 				68864AA2278218D30063A2A1 /* ScrollViewTestView.swift in Sources */,
+				686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */,
+				686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */,
 				6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */,
 				6874036D26CF9ABA00C44AB4 /* BottomSheet.swift in Sources */,
 				68C26F29277B52C2006DCA4F /* SearchNavigationTestView.swift in Sources */,
@@ -849,6 +868,7 @@
 				6824633026EE5DC800F31B5F /* AttributedString+Extension.swift in Sources */,
 				686D683E26F23D2B008F36D5 /* URLCacheImageListRowView.swift in Sources */,
 				6874866B278CA69400DCAFEF /* ContainerView.swift in Sources */,
+				686437FF2970851300FA4C31 /* Persistence.swift in Sources */,
 				6874037626CF9DC300C44AB4 /* BottomSheetTestView1.swift in Sources */,
 				68B31A18278C652000551CDF /* ViewBuilderTestView.swift in Sources */,
 				684A4D4B26FC892700BA61A0 /* BlurEffectView.swift in Sources */,
@@ -1210,6 +1230,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		686437C0297083B300FA4C31 /* CoreDataTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				686437C1297083B300FA4C31 /* CoreDataTest.xcdatamodel */,
+			);
+			currentVersion = 686437C1297083B300FA4C31 /* CoreDataTest.xcdatamodel */;
+			path = CoreDataTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 6822CA2925FE5CE000120D13 /* Project object */;
 }

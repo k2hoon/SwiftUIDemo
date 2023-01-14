@@ -14,6 +14,7 @@ struct ContentView: View {
     @State private var isAlertTestActive = false
     @State private var isCombineTestActive = false
     @State private var isCacheImageListActive = false
+    @State private var isCoreDataTestActive = false
     
     var body: some View {
         NavigationView {
@@ -86,6 +87,15 @@ struct ContentView: View {
                         }, label: {
                             Text("Cache Image List TestView")
                         })
+                    })
+                
+                NavigationLink(
+                    destination: CoreDataTestView(),
+                    isActive: $isCoreDataTestActive,
+                    label: {
+                        Button(action: { self.isCoreDataTestActive.toggle() }) {
+                            Text("Core Data Test View")
+                        }
                     })
                 
                 
