@@ -21,6 +21,7 @@ struct ContentView: View {
         case navigationTab = "Navigation tab test"
         case navigationSearch = "Navigation search test"
         case layout = "Layout test"
+        case dataflow = "Data flow test"
                 
         func viewBuilder() -> AnyView {
             switch self {
@@ -36,6 +37,7 @@ struct ContentView: View {
             case .navigationTab: return AnyView(NavigationTabView())
             case .navigationSearch: return AnyView(NavigationSearchTestView())
             case .layout: return AnyView(LayoutTestView())
+            case .dataflow: return AnyView(DataFlowTestView())
             }
         }
     }
@@ -75,3 +77,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
