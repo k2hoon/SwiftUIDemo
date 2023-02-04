@@ -20,6 +20,9 @@ extension Color {
     static let green300 = Color(hex: "#81c784")
     static let blue700 = Color(hex: "#1976d2")
     static let cyan700 = Color(hex: "#0097a7")
+//    static var random: Color {
+//        Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
+//    }
 }
 
 extension Color {
