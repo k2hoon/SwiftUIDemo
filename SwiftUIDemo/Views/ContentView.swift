@@ -22,6 +22,7 @@ struct ContentView: View {
         case navigationSearch = "Navigation search test"
         case layout = "Layout test"
         case dataflow = "Data flow test"
+        case dataflow2 = "Data flow2 test"
                 
         func viewBuilder() -> AnyView {
             switch self {
@@ -38,6 +39,7 @@ struct ContentView: View {
             case .navigationSearch: return AnyView(NavigationSearchTestView())
             case .layout: return AnyView(LayoutTestView())
             case .dataflow: return AnyView(DataFlowTestView())
+            case .dataflow2: return AnyView(DataFlowTest2View())
             }
         }
     }
