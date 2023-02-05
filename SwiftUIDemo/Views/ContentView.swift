@@ -23,23 +23,23 @@ struct ContentView: View {
         case layout = "Layout test"
         case dataflow = "Data flow test"
         case dataflow2 = "Data flow2 test"
-                
-        func viewBuilder() -> AnyView {
+        
+        @ViewBuilder func viewBuilder() -> some View {
             switch self {
-            case .webLink: return AnyView(WebLinkTestView())
-            case .attributedString: return AnyView(AttributedStringTestView())
-            case .alert: return AnyView(AlertViewTextView())
-            case .cacheImage: return AnyView(CachedImageListView())
-            case .combine: return AnyView(CombineTestView())
-            case .coreData: return AnyView(CoreDataTestView())
-            case .json: return AnyView(JsonView())
-            case .segment: return AnyView(SegmentPickerTestView())
-            case .tab: return AnyView(TabHeaderTestView())
-            case .navigationTab: return AnyView(NavigationTabView())
-            case .navigationSearch: return AnyView(NavigationSearchTestView())
-            case .layout: return AnyView(LayoutTestView())
-            case .dataflow: return AnyView(DataFlowTestView())
-            case .dataflow2: return AnyView(DataFlowTest2View())
+            case .webLink: WebLinkTestView()
+            case .attributedString: AttributedStringTestView()
+            case .alert: AlertViewTextView()
+            case .cacheImage: CachedImageListView()
+            case .combine: CombineTestView()
+            case .coreData: CoreDataTestView()
+            case .json: JsonView()
+            case .segment: SegmentPickerTestView()
+            case .tab: TabHeaderTestView()
+            case .navigationTab: NavigationTabView()
+            case .navigationSearch: NavigationSearchTestView()
+            case .layout: LayoutTestView()
+            case .dataflow: DataFlowTestView()
+            case .dataflow2: DataFlowTest2View()
             }
         }
     }
@@ -47,17 +47,15 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("Hello. This is...")
+                Text("Hello. This is SwiftUI Collection")
                     .font(.headline)
                     .padding()
-                HStack {
-                    Text("""
-                    This is somethig to explain....
-                    """)
-                        .multilineTextAlignment(.leading)
-                }
-                .font(.subheadline)
-                .foregroundColor(.secondary)
+                
+                Text("Thia app is designed to provide a collection of test views using SwiftUI framework.")
+                    .multilineTextAlignment(.leading)
+                    .padding(.horizontal, 16)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
                 
                 Divider()
                 
