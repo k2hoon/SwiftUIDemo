@@ -7,11 +7,6 @@
 
 import SwiftUI
 
-class DataFlowViewModel: ObservableObject {
-    @Published var firstValue = 0
-    @Published var secondValue = 0
-}
-
 struct DataFlowTestView: View {
     // State property
     @State var firstValue = 0
