@@ -43,6 +43,18 @@ struct DataFlowTest2View: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
                 ObservedView(viewModel: self.viewModel)
+                
+                Divider()
+            }
+            
+            // EnvironmentObject
+            VStack {
+                Text("EnvironmentObject")
+                    .font(.title3).bold()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                EnvironmentView()
+                    .environmentObject(self.viewModel)
             }
         }
         .padding()
@@ -52,7 +64,7 @@ struct DataFlowTest2View: View {
         let value: Int
         
         var body: some View {
-            Text("let: \(self.value)")
+            Text("let first: \(self.value)")
                 .padding()
                 .border(Color.black)
                 .background(Color.random)
@@ -83,22 +95,53 @@ extension DataFlowTest2View {
         @ObservedObject var viewModel: DataFlowViewModel
         
         var body: some View {
-            Toggle(isOn: self.$viewModel.isEnabled) {
-                Text("Toggle view")
-            }
-            .padding()
-            
-            Text("observed: \(self.viewModel.firstValue)")
+            VStack {
+                Toggle(isOn: self.$viewModel.isEnabled) {
+                    Text("Toggle view")
+                }
                 .padding()
-                .border(Color.black)
-                .background(Color.random)
-            
-            Button("Toggle switch") {
-                self.viewModel.isEnabled.toggle()
+                
+                Text("observed: \(self.viewModel.firstValue)")
+                    .padding()
+                    .border(Color.black)
+                    .background(Color.random)
+                
+                Button("Toggle switch") {
+                    self.viewModel.isEnabled.toggle()
+                }
+                
+                Button("Increate first value") {
+                    self.viewModel.firstValue += 1
+                }
             }
-            
-            Button("Increate first value") {
-                self.viewModel.firstValue += 1
+        }
+    }
+}
+
+// MARK: Environment sub view
+extension DataFlowTest2View {
+    struct EnvironmentView: View {
+        @EnvironmentObject private var viewModel: DataFlowViewModel
+        
+        var body: some View {
+            VStack {
+                Toggle(isOn: self.$viewModel.isEnabled) {
+                    Text("Toggle view")
+                }
+                .padding()
+                
+                Text("environment second value: \(self.viewModel.secondValue)")
+                    .padding()
+                    .border(Color.black)
+                    .background(Color.random)
+                
+                Button("Toggle switch") {
+                    self.viewModel.isEnabled.toggle()
+                }
+                
+                Button("Increate second value") {
+                    self.viewModel.secondValue += 1
+                }
             }
         }
     }
