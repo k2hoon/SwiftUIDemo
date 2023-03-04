@@ -25,6 +25,7 @@ struct ContentView: View {
         case dataflow2 = "Data flow2 test"
         case gradients = "Gradients Test"
         case mask = "Mask Test"
+        case truncaeText = "Truncate Test"
         
         @ViewBuilder func viewBuilder() -> some View {
             switch self {
@@ -44,6 +45,7 @@ struct ContentView: View {
             case .dataflow2: DataFlowTest2View()
             case .gradients: GradientsView()
             case .mask: MaskView()
+            case .truncaeText: TruncatedTextView()
             }
         }
     }

@@ -7,21 +7,6 @@
 
 import SwiftUI
 
-extension View {
-    func eraseToAnyView() -> AnyView {
-        AnyView(self)
-    }
-}
-
-struct SizePreferenceKey: PreferenceKey {
-    typealias Value = CGSize
-    
-    static var defaultValue: CGSize = .zero
-    static func reduce(value: inout CGSize, nextValue: () -> CGSize) {
-        value = nextValue()
-    }
-}
-
 struct BackgroundGeometryReader: View {
     var body: some View {
         GeometryReader { geometry in
