@@ -114,7 +114,7 @@ struct TruncatedText: View {
                 Button(action: { self.isExpand.toggle() }) {
                     Image(systemName: "arrow.down.circle")
                 }
-                .readSize {
+                .viewSize {
                     self.buttonSize = $0
                 }
                 

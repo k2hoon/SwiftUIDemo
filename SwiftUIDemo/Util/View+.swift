@@ -13,7 +13,7 @@ extension View {
         AnyView(self)
     }
     
-    func readSize(onChange: @escaping (CGSize) -> Void) -> some View {
+    func viewSize(onChange: @escaping (CGSize) -> Void) -> some View {
         background(
             GeometryReader { geometry in
                 Color.clear
