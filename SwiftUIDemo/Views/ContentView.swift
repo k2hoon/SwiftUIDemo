@@ -25,6 +25,8 @@ struct ContentView: View {
         case dataflow2 = "Data flow2 test"
         case gradients = "Gradients Test"
         case mask = "Mask Test"
+        case maskLit = "Mask List Test"
+        case material = "Material Test"
         case truncaeText = "Truncate Test"
         
         @ViewBuilder func viewBuilder() -> some View {
@@ -45,6 +47,8 @@ struct ContentView: View {
             case .dataflow2: DataFlowTest2View()
             case .gradients: GradientsView()
             case .mask: MaskView()
+            case .maskLit: MaskListView()
+            case .material: MaterialView()
             case .truncaeText: TruncatedTextView()
             }
         }
@@ -73,6 +77,7 @@ struct ContentView: View {
                     }
                 }
             }
+            .navigationViewStyle(.stack)
             .navigationTitle("")
             .navigationBarHidden(true)
         }
