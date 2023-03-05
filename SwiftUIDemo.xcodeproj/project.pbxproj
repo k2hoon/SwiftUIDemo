@@ -119,6 +119,8 @@
 		68F7D336273ABF000058BF98 /* NavigationHiddenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */; };
 		68F7D338273AC27F0058BF98 /* NavigationToolbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7D337273AC27F0058BF98 /* NavigationToolbarView.swift */; };
 		68F7E07827C3D881000E1E02 /* LayoutTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7E07727C3D881000E1E02 /* LayoutTestView.swift */; };
+		68FA21E129B5107A002DA536 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E029B5107A002DA536 /* MaterialView.swift */; };
+		68FA21E329B51097002DA536 /* MaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E229B51097002DA536 /* MaskListView.swift */; };
 		68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */; };
 		68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -259,6 +261,8 @@
 		68F7D335273ABF000058BF98 /* NavigationHiddenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHiddenView.swift; sourceTree = "<group>"; };
 		68F7D337273AC27F0058BF98 /* NavigationToolbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationToolbarView.swift; sourceTree = "<group>"; };
 		68F7E07727C3D881000E1E02 /* LayoutTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTestView.swift; sourceTree = "<group>"; };
+		68FA21E029B5107A002DA536 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		68FA21E229B51097002DA536 /* MaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskListView.swift; sourceTree = "<group>"; };
 		68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestView.swift; sourceTree = "<group>"; };
 		68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -646,6 +650,8 @@
 			children = (
 				689EFC1729B3CC300045732E /* GradientsView.swift */,
 				689EFC1A29B3CC4C0045732E /* MaskView.swift */,
+				68FA21E029B5107A002DA536 /* MaterialView.swift */,
+				68FA21E229B51097002DA536 /* MaskListView.swift */,
 			);
 			path = Graphics;
 			sourceTree = "<group>";
@@ -875,6 +881,7 @@
 				689EFC1D29B3D0F60045732E /* TruncatedTextView.swift in Sources */,
 				686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */,
 				686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */,
+				68FA21E329B51097002DA536 /* MaskListView.swift in Sources */,
 				6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */,
 				6874036D26CF9ABA00C44AB4 /* BottomSheet.swift in Sources */,
 				68C26F29277B52C2006DCA4F /* SearchNavigationTestView.swift in Sources */,
@@ -925,6 +932,7 @@
 				6874036B26CF9A9C00C44AB4 /* RoundedCorner.swift in Sources */,
 				68B8CCFA2958B453004ECB8E /* PinchViewController.swift in Sources */,
 				686D684126F23F8A008F36D5 /* CombineListView.swift in Sources */,
+				68FA21E129B5107A002DA536 /* MaterialView.swift in Sources */,
 				683678DF271B35FA005433B0 /* NavigationTestView.swift in Sources */,
 				6874037A26CFA05B00C44AB4 /* BottomSheetTestView3.swift in Sources */,
 				68321416276E6B64003860CB /* TabHeaderView.swift in Sources */,
