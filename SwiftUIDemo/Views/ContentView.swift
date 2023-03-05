@@ -28,6 +28,8 @@ struct ContentView: View {
         case maskLit = "Mask List Test"
         case material = "Material Test"
         case truncaeText = "Truncate Test"
+        case tagControl = "Tag Control Test"
+        case tagList = "Tag List Test"
         
         @ViewBuilder func viewBuilder() -> some View {
             switch self {
@@ -50,6 +52,8 @@ struct ContentView: View {
             case .maskLit: MaskListView()
             case .material: MaterialView()
             case .truncaeText: TruncatedTextView()
+            case .tagControl: TagControlView()
+            case .tagList: TagListTestView()
             }
         }
     }
