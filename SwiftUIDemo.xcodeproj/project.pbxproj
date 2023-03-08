@@ -107,6 +107,9 @@
 		68A84C1F298F4029008909C7 /* DataFlowTest2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A84C1E298F4029008909C7 /* DataFlowTest2View.swift */; };
 		68A84C21298F4045008909C7 /* DataFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A84C20298F4045008909C7 /* DataFlowViewModel.swift */; };
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
+		68AD282929B91F36001577F9 /* SafeAreaView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */; };
+		68AD282B29B92440001577F9 /* SafeAreaView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282A29B92440001577F9 /* SafeAreaView+VStack.swift */; };
+		68AD282D29B927A0001577F9 /* SafeAreaInsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282C29B927A0001577F9 /* SafeAreaInsetView.swift */; };
 		68B31A18278C652000551CDF /* ViewBuilderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B31A17278C652000551CDF /* ViewBuilderTestView.swift */; };
 		68B8CCF82958B434004ECB8E /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF72958B434004ECB8E /* PinchView.swift */; };
 		68B8CCFA2958B453004ECB8E /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF92958B453004ECB8E /* PinchViewController.swift */; };
@@ -123,6 +126,7 @@
 		68FA21E329B51097002DA536 /* MaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E229B51097002DA536 /* MaskListView.swift */; };
 		68FA21E529B515F1002DA536 /* TagListTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E429B515F1002DA536 /* TagListTestView.swift */; };
 		68FA21E829B51726002DA536 /* TagControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E729B51726002DA536 /* TagControlView.swift */; };
+		68FA21EA29B519CA002DA536 /* SafeAreaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FA21E929B519CA002DA536 /* SafeAreaView.swift */; };
 		68FF7C2B26E10E2400ED28E6 /* CombineTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */; };
 		68FF7C2D26E10E2D00ED28E6 /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -251,6 +255,9 @@
 		68A84C1E298F4029008909C7 /* DataFlowTest2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowTest2View.swift; sourceTree = "<group>"; };
 		68A84C20298F4045008909C7 /* DataFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowViewModel.swift; sourceTree = "<group>"; };
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
+		68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeAreaView+Keyboard.swift"; sourceTree = "<group>"; };
+		68AD282A29B92440001577F9 /* SafeAreaView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeAreaView+VStack.swift"; sourceTree = "<group>"; };
+		68AD282C29B927A0001577F9 /* SafeAreaInsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetView.swift; sourceTree = "<group>"; };
 		68B31A17278C652000551CDF /* ViewBuilderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderTestView.swift; sourceTree = "<group>"; };
 		68B8CCF72958B434004ECB8E /* PinchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchView.swift; sourceTree = "<group>"; };
 		68B8CCF92958B453004ECB8E /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +274,7 @@
 		68FA21E229B51097002DA536 /* MaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskListView.swift; sourceTree = "<group>"; };
 		68FA21E429B515F1002DA536 /* TagListTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagListTestView.swift; sourceTree = "<group>"; };
 		68FA21E729B51726002DA536 /* TagControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagControlView.swift; sourceTree = "<group>"; };
+		68FA21E929B519CA002DA536 /* SafeAreaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaView.swift; sourceTree = "<group>"; };
 		68FF7C2A26E10E2400ED28E6 /* CombineTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTestView.swift; sourceTree = "<group>"; };
 		68FF7C2C26E10E2D00ED28E6 /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -693,6 +701,10 @@
 		68BF86DB27E2A36400119D93 /* LayoutTest */ = {
 			isa = PBXGroup;
 			children = (
+				68FA21E929B519CA002DA536 /* SafeAreaView.swift */,
+				68AD282C29B927A0001577F9 /* SafeAreaInsetView.swift */,
+				68AD282A29B92440001577F9 /* SafeAreaView+VStack.swift */,
+				68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */,
 				68F7E07727C3D881000E1E02 /* LayoutTestView.swift */,
 			);
 			path = LayoutTest;
@@ -893,6 +905,7 @@
 				686D683726F23B61008F36D5 /* CachedImageListRowView.swift in Sources */,
 				68864AA2278218D30063A2A1 /* ScrollViewTestView.swift in Sources */,
 				689EFC1D29B3D0F60045732E /* TruncatedTextView.swift in Sources */,
+				68AD282929B91F36001577F9 /* SafeAreaView+Keyboard.swift in Sources */,
 				686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */,
 				686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */,
 				68FA21E329B51097002DA536 /* MaskListView.swift in Sources */,
@@ -901,6 +914,7 @@
 				68C26F29277B52C2006DCA4F /* SearchNavigationTestView.swift in Sources */,
 				68A84C1F298F4029008909C7 /* DataFlowTest2View.swift in Sources */,
 				6806132E26D4F92F00944E1E /* Alert+TextLink.swift in Sources */,
+				68AD282D29B927A0001577F9 /* SafeAreaInsetView.swift in Sources */,
 				686D683326F2357A008F36D5 /* EnvironmentValues+ImageCache.swift in Sources */,
 				680BBBCA27231B4200E61763 /* PathTestView.swift in Sources */,
 				686D684326F23F95008F36D5 /* CombineListRowView.swift in Sources */,
@@ -917,6 +931,7 @@
 				6822CA3525FE5CE000120D13 /* SwiftUIDemoApp.swift in Sources */,
 				683ABFDD26B9271000779E5B /* Alert+UIAlert.swift in Sources */,
 				689EFC1829B3CC300045732E /* GradientsView.swift in Sources */,
+				68AD282B29B92440001577F9 /* SafeAreaView+VStack.swift in Sources */,
 				6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */,
 				686D682826F1FF81008F36D5 /* ShimmerListViewModel.swift in Sources */,
 				68321414276E5EC9003860CB /* SegmentPickerView.swift in Sources */,
@@ -978,6 +993,7 @@
 				683678E1271B4578005433B0 /* NavigationView+View.swift in Sources */,
 				6806132026D4A4E700944E1E /* RefreshListViewTest.swift in Sources */,
 				6837FC51274C05CC0076A14D /* JsonView.swift in Sources */,
+				68FA21EA29B519CA002DA536 /* SafeAreaView.swift in Sources */,
 				68372E1926B469A3003B313A /* Font+Custom.swift in Sources */,
 				68149CDF2772165800CAEDA1 /* Color+.swift in Sources */,
 				68149CE427722A2B00CAEDA1 /* SegmentPickerTestView.swift in Sources */,
