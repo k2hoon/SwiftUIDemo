@@ -110,6 +110,7 @@
 		68AD282929B91F36001577F9 /* SafeAreaView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */; };
 		68AD282B29B92440001577F9 /* SafeAreaView+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282A29B92440001577F9 /* SafeAreaView+VStack.swift */; };
 		68AD282D29B927A0001577F9 /* SafeAreaInsetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282C29B927A0001577F9 /* SafeAreaInsetView.swift */; };
+		68AD282F29B932D1001577F9 /* AnimatableModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282E29B932D1001577F9 /* AnimatableModifierView.swift */; };
 		68B31A18278C652000551CDF /* ViewBuilderTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B31A17278C652000551CDF /* ViewBuilderTestView.swift */; };
 		68B8CCF82958B434004ECB8E /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF72958B434004ECB8E /* PinchView.swift */; };
 		68B8CCFA2958B453004ECB8E /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF92958B453004ECB8E /* PinchViewController.swift */; };
@@ -258,6 +259,7 @@
 		68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeAreaView+Keyboard.swift"; sourceTree = "<group>"; };
 		68AD282A29B92440001577F9 /* SafeAreaView+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeAreaView+VStack.swift"; sourceTree = "<group>"; };
 		68AD282C29B927A0001577F9 /* SafeAreaInsetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafeAreaInsetView.swift; sourceTree = "<group>"; };
+		68AD282E29B932D1001577F9 /* AnimatableModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierView.swift; sourceTree = "<group>"; };
 		68B31A17278C652000551CDF /* ViewBuilderTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBuilderTestView.swift; sourceTree = "<group>"; };
 		68B8CCF72958B434004ECB8E /* PinchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchView.swift; sourceTree = "<group>"; };
 		68B8CCF92958B453004ECB8E /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
@@ -662,6 +664,7 @@
 			isa = PBXGroup;
 			children = (
 				689EFC1729B3CC300045732E /* GradientsView.swift */,
+				68AD282E29B932D1001577F9 /* AnimatableModifierView.swift */,
 				689EFC1A29B3CC4C0045732E /* MaskView.swift */,
 				68FA21E029B5107A002DA536 /* MaterialView.swift */,
 				68FA21E229B51097002DA536 /* MaskListView.swift */,
@@ -957,6 +960,7 @@
 				686D682E26F2266B008F36D5 /* AsyncContentsList.swift in Sources */,
 				68F7D338273AC27F0058BF98 /* NavigationToolbarView.swift in Sources */,
 				6874036F26CF9AD000C44AB4 /* BottomSheetPosition.swift in Sources */,
+				68AD282F29B932D1001577F9 /* AnimatableModifierView.swift in Sources */,
 				686D682326F1FF03008F36D5 /* ShimmerListView.swift in Sources */,
 				6874036B26CF9A9C00C44AB4 /* RoundedCorner.swift in Sources */,
 				68B8CCFA2958B453004ECB8E /* PinchViewController.swift in Sources */,
