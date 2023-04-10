@@ -12,6 +12,4 @@ extension CarouselList {
         var id = UUID().uuidString
         var name: String
     }
-    
-    
 }

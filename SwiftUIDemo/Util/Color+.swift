@@ -20,10 +20,10 @@ extension Color {
     static let green300 = Color(hex: "#81c784")
     static let blue700 = Color(hex: "#1976d2")
     static let cyan700 = Color(hex: "#0097a7")
-//    static let primary = Color(hex: "0097a7")
-//    static var random: Color {
-//        Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
-//    }
+    //    static let primary = Color(hex: "0097a7")
+    //    static var random: Color {
+    //        Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
+    //    }
 }
 
 extension Color {
@@ -47,5 +47,9 @@ extension Color {
                   green: Double((hex >> 8) & 0xff) / 255.0,
                   blue: Double((hex >> 0) & 0xff) / 255.0,
                   opacity: alplha)
+    }
+    
+    func toUIColor() -> UIColor {
+        return UIColor(self)
     }
 }
