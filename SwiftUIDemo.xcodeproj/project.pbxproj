@@ -68,6 +68,8 @@
 		686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 686437C0297083B300FA4C31 /* CoreDataTest.xcdatamodeld */; };
 		686437FF2970851300FA4C31 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686437FE2970851300FA4C31 /* Persistence.swift */; };
 		686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686438002970852C00FA4C31 /* CoreDataTestView.swift */; };
+		686471E929E5C605006BE588 /* TabBarHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686471E829E5C605006BE588 /* TabBarHideView.swift */; };
+		686471EB29E5D0F9006BE588 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686471EA29E5D0F9006BE588 /* MailView.swift */; };
 		686D681B26F1F8B2008F36D5 /* ImageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681A26F1F8B2008F36D5 /* ImageListView.swift */; };
 		686D681D26F1F8C4008F36D5 /* ImageListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681C26F1F8C4008F36D5 /* ImageListRowView.swift */; };
 		686D681F26F1F935008F36D5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686D681E26F1F935008F36D5 /* ImageLoader.swift */; };
@@ -227,6 +229,8 @@
 		686437C1297083B300FA4C31 /* CoreDataTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataTest.xcdatamodel; sourceTree = "<group>"; };
 		686437FE2970851300FA4C31 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		686438002970852C00FA4C31 /* CoreDataTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTestView.swift; sourceTree = "<group>"; };
+		686471E829E5C605006BE588 /* TabBarHideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHideView.swift; sourceTree = "<group>"; };
+		686471EA29E5D0F9006BE588 /* MailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
 		686D681A26F1F8B2008F36D5 /* ImageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListView.swift; sourceTree = "<group>"; };
 		686D681C26F1F8C4008F36D5 /* ImageListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageListRowView.swift; sourceTree = "<group>"; };
 		686D681E26F1F935008F36D5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
@@ -331,6 +335,8 @@
 			children = (
 				68321415276E6B64003860CB /* TabHeaderView.swift */,
 				68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */,
+				686471E829E5C605006BE588 /* TabBarHideView.swift */,
+				686471EA29E5D0F9006BE588 /* MailView.swift */,
 			);
 			path = TabViewTest;
 			sourceTree = "<group>";
@@ -1020,9 +1026,11 @@
 				68EA0C1E29E341FA00EDF40E /* CarouselList+.swift in Sources */,
 				686D681D26F1F8C4008F36D5 /* ImageListRowView.swift in Sources */,
 				686D682A26F1FFE3008F36D5 /* ShimmerListEmptyView.swift in Sources */,
+				686471E929E5C605006BE588 /* TabBarHideView.swift in Sources */,
 				68B8CCFC2958B46D004ECB8E /* PinchZoomTestView.swift in Sources */,
 				68A84C21298F4045008909C7 /* DataFlowViewModel.swift in Sources */,
 				68F7D331273AB8C40058BF98 /* NavigationTabView.swift in Sources */,
+				686471EB29E5D0F9006BE588 /* MailView.swift in Sources */,
 				686D682C26F201E4008F36D5 /* ShimmerListContentsView.swift in Sources */,
 				686D682E26F2266B008F36D5 /* AsyncContentsList.swift in Sources */,
 				68F7D338273AC27F0058BF98 /* NavigationToolbarView.swift in Sources */,
