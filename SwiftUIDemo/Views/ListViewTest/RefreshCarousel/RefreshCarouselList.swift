@@ -35,7 +35,7 @@ struct RefreshCarouselList: View {
                 
                 VStack(spacing: 15) {
                     // top
-                    TitleBack(title: "Carousel list", spacing: 12) {
+                    TitleBack(title: "Refresh Carousel list", spacing: 12) {
                         // TODO: something
                     }
                     .frame(height: 70)
@@ -118,12 +118,11 @@ struct RefreshCarouselList: View {
         }
         
         @GestureState var offset: CGFloat = 0
-        @State var currentIndex: Int = 0
-        @State var offsetValue: CGFloat = 0
-        @State var progress: CGFloat = 0
-        @State var isEligible = false
-        @State var isRefresh = false
-        @State var lastIndex = 0
+        @State private var currentIndex: Int = 0
+        @State private var progress: CGFloat = 0
+        @State private var isEligible = false
+        @State private var isRefresh = false
+        @State private var lastIndex = 0
         
         var body: some View {
             GeometryReader { proxy in
@@ -175,10 +174,6 @@ struct RefreshCarouselList: View {
                                 let progress = -offsetY / height
                                 let roundIndex = progress.rounded()
                                 
-                                
-                                
-                                self.offsetValue = offsetY
-                                
                                 if !isRefresh && index == 0 {
                                     if offsetY > THRESHOLD {
                                         self.isEligible = true
@@ -201,7 +196,7 @@ struct RefreshCarouselList: View {
                                 let progress = -offsetY / height
                                 let roundIndex = progress.rounded()
                                 
-                                if index == 0 {
+                                if index == 0 && offsetY > 0 {
                                     let drag = offsetY / THRESHOLD
                                     self.progress = (drag < 0 ? 0 : drag)
                                     self.progress = (drag > 1 ? 1 : drag)
@@ -210,8 +205,6 @@ struct RefreshCarouselList: View {
                                 lastIndex = max(min(currentIndex + Int(roundIndex), list.count - 1), 0)
                             })
                     )
-                    
-                    
                 }
                 .animation(.easeInOut, value: offset == 0)
             }
@@ -243,7 +236,7 @@ struct RefreshCarouselList: View {
             isAnimating ? uiView.startAnimating() : uiView.stopAnimating()
             configuration(uiView)
         }
-    }   
+    }
 }
 
 struct RefreshCarouselList_Previews: PreviewProvider {
