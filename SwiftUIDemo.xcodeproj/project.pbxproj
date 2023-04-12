@@ -117,6 +117,7 @@
 		68B8CCF82958B434004ECB8E /* PinchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF72958B434004ECB8E /* PinchView.swift */; };
 		68B8CCFA2958B453004ECB8E /* PinchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCF92958B453004ECB8E /* PinchViewController.swift */; };
 		68B8CCFC2958B46D004ECB8E /* PinchZoomTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68B8CCFB2958B46D004ECB8E /* PinchZoomTestView.swift */; };
+		68BBCADC29E708FA00EA78A0 /* NaviHideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68BBCADB29E708FA00EA78A0 /* NaviHideView.swift */; };
 		68C26F27277B4D35006DCA4F /* NavigationSearchControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C26F26277B4D35006DCA4F /* NavigationSearchControllerView.swift */; };
 		68C26F29277B52C2006DCA4F /* SearchNavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C26F28277B52C2006DCA4F /* SearchNavigationTestView.swift */; };
 		68CD31B829E468C8008FBE4F /* RefreshCarouselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CD31B729E468C8008FBE4F /* RefreshCarouselList.swift */; };
@@ -278,6 +279,7 @@
 		68B8CCF72958B434004ECB8E /* PinchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchView.swift; sourceTree = "<group>"; };
 		68B8CCF92958B453004ECB8E /* PinchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchViewController.swift; sourceTree = "<group>"; };
 		68B8CCFB2958B46D004ECB8E /* PinchZoomTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinchZoomTestView.swift; sourceTree = "<group>"; };
+		68BBCADB29E708FA00EA78A0 /* NaviHideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviHideView.swift; sourceTree = "<group>"; };
 		68C26F26277B4D35006DCA4F /* NavigationSearchControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationSearchControllerView.swift; sourceTree = "<group>"; };
 		68C26F28277B52C2006DCA4F /* SearchNavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationTestView.swift; sourceTree = "<group>"; };
 		68CD31B729E468C8008FBE4F /* RefreshCarouselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshCarouselList.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				68149CE027721FCE00CAEDA1 /* TabHeaderTestView.swift */,
 				686471E829E5C605006BE588 /* TabBarHideView.swift */,
 				686471EA29E5D0F9006BE588 /* MailView.swift */,
+				68BBCADB29E708FA00EA78A0 /* NaviHideView.swift */,
 			);
 			path = TabViewTest;
 			sourceTree = "<group>";
@@ -1057,6 +1060,7 @@
 				6874037126CF9AE200C44AB4 /* BottomSheetView.swift in Sources */,
 				689EFC1B29B3CC4C0045732E /* MaskView.swift in Sources */,
 				689EFC1F29B3D14A0045732E /* View+.swift in Sources */,
+				68BBCADC29E708FA00EA78A0 /* NaviHideView.swift in Sources */,
 				684A4D4D26FC8F3600BA61A0 /* BottomSheetTestView.swift in Sources */,
 				68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */,
 				686D682126F1FC82008F36D5 /* ShimmeringView.swift in Sources */,
