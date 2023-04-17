@@ -24,11 +24,11 @@ struct ShimmeringView: View {
                 .shimmering()
             
             Text("Hello world")
-                .shimmering()
-            
-            Text("Hello world")
                 .redacted(reason: .placeholder)
                 .shimmering(gradient: false)
+            
+            Text("Hello world")
+                .shimmering()
             
             Text("Hello world")
                 .shimmering(gradient: false, redacted: true)
@@ -38,41 +38,45 @@ struct ShimmeringView: View {
 
 struct ShimmeringView_Previews: PreviewProvider {
     static var previews: some View {
-        //ShimmeringView()
         Group {
-            Text("SwiftUI Shimmer")
-            if #available(iOS 14.0, macOS 11.0, tvOS 14.0, watchOS 7.0, *) {
+            
+            ShimmeringView()
+            
+            VStack {
                 Text("SwiftUI Shimmer").preferredColorScheme(.light)
+                
                 Text("SwiftUI Shimmer").preferredColorScheme(.dark)
+                
                 VStack(alignment: .leading) {
                     Text("Loading...").font(.title)
                     Text(String(repeating: "Shimmer", count: 12))
                         .redacted(reason: .placeholder)
-                }.frame(maxWidth: 200)
+                }
+                .frame(width: 200)
             }
+            .padding()
+            .shimmering()
+            .previewLayout(.sizeThatFits)
         }
-        .padding()
-        .shimmering()
-        .previewLayout(.sizeThatFits)
     }
 }
 
-// MARK: -
-
-public struct ShimmeringConfiguration {
+// MARK: - Shimmering
+struct ShimmeringConfiguration {
     public let gradient: Gradient
     public let startLocation: (start: UnitPoint, end: UnitPoint)
     public let endLocation: (start: UnitPoint, end: UnitPoint)
     public let duration: TimeInterval
     public let opacity: Double
-    public static let `default` = ShimmeringConfiguration(gradient: Gradient(stops: [.init(color: .black, location: 0),
-                                                                                     .init(color: .white, location: 0.3),
-                                                                                     .init(color: .white, location: 0.7),
-                                                                                     .init(color: .black, location: 1)]),
-                                                          startLocation: (start: UnitPoint(x: -1, y: 0.5), end: .leading),
-                                                          endLocation: (start: .trailing, end: UnitPoint(x: 2, y: 0.5)),
-                                                          duration: 2,
-                                                          opacity: 0.6)
+    public static let `default` = ShimmeringConfiguration(
+        gradient: Gradient(stops: [.init(color: .black, location: 0),
+                                   .init(color: .white, location: 0.3),
+                                   .init(color: .white, location: 0.7),
+                                   .init(color: .black, location: 1)]),
+        startLocation: (start: UnitPoint(x: -1, y: 0.5), end: .leading),
+        endLocation: (start: .trailing, end: UnitPoint(x: 2, y: 0.5)),
+        duration: 2,
+        opacity: 0.6)
 }
 
 struct ShimmeringEffect<Content: View>: View {
@@ -94,34 +98,33 @@ struct ShimmeringEffect<Content: View>: View {
             LinearGradient(gradient: configuration.gradient, startPoint: startPoint, endPoint: endPoint)
                 .opacity(configuration.opacity)
                 .blendMode(.screen)
-                .onAppear(perform: {
+                .onAppear {
                     withAnimation(Animation.linear(duration: configuration.duration).repeatForever(autoreverses: false)) {
                         startPoint = configuration.endLocation.start
                         endPoint = configuration.endLocation.end
                     }
-                })
+                }
         }
         .ignoresSafeArea()
     }
 }
 
-public struct ShimmerModifier: ViewModifier {
+struct ShimmerModifier: ViewModifier {
     let configuration: ShimmeringConfiguration
-    public func body(content: Content) -> some View {
+    func body(content: Content) -> some View {
         ShimmeringEffect(configuration: configuration) {
             content
         }
     }
 }
 
-public extension View {
+extension View {
     func shimmer(configuration: ShimmeringConfiguration = .default) -> some View {
         modifier(ShimmerModifier(configuration: configuration))
     }
 }
 
 struct Shimmer: ViewModifier {
-    
     private struct Constants {
         static let minOpacity: Double = 0.25
         static let maxOpacity: Double = 1.0
@@ -140,7 +143,7 @@ struct Shimmer: ViewModifier {
         if gradient {
             content
                 .modifier(AnimatedMask(phase: phase)
-                            .animation(Animation.linear(duration: duration).repeatForever(autoreverses: autoreverses)))
+                    .animation(Animation.linear(duration: duration).repeatForever(autoreverses: autoreverses)))
                 .onAppear { phase = 0.8 }
         } else {
             if redacted {
@@ -152,24 +155,24 @@ struct Shimmer: ViewModifier {
                     )
                     .opacity(opacity)
                     .transition(.opacity)
-                    .onAppear(perform: {
+                    .onAppear {
                         let baseAnimation = Animation.easeInOut(duration: duration)
                         let repeated = baseAnimation.repeatForever(autoreverses: true)
                         withAnimation(repeated) {
                             self.opacity = Constants.maxOpacity
                         }
-                    })
+                    }
             } else {
                 content
                     .opacity(opacity)
                     .transition(.opacity)
-                    .onAppear(perform: {
+                    .onAppear {
                         let baseAnimation = Animation.easeInOut(duration: duration)
                         let repeated = baseAnimation.repeatForever(autoreverses: autoreverses)
                         withAnimation(repeated) {
                             self.opacity = Constants.maxOpacity
                         }
-                    })
+                    }
             }
         }
     }
@@ -189,7 +192,6 @@ struct Shimmer: ViewModifier {
         }
     }
     
-    
     /// A slanted, animatable gradient between transparent and opaque to use as mask.
     /// The `phase` parameter shifts the gradient, moving the opaque band.
     struct GradientMask: View {
@@ -198,12 +200,15 @@ struct Shimmer: ViewModifier {
         let edgeColor = Color.black.opacity(0.3)
         
         var body: some View {
-            LinearGradient(gradient:
-                            Gradient(stops: [
-                                .init(color: edgeColor, location: phase),
-                                .init(color: centerColor, location: phase + 0.1),
-                                .init(color: edgeColor, location: phase + 0.2)
-                            ]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(
+                gradient: Gradient(
+                    stops: [
+                        .init(color: edgeColor, location: phase),
+                        .init(color: centerColor, location: phase + 0.1),
+                        .init(color: edgeColor, location: phase + 0.2)
+                    ]),
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
         }
     }
 }

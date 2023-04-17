@@ -18,31 +18,32 @@ struct ShimmerListView: View {
     
     var body: some View {
         ZStack {
-            Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1))
             VStack {
-                Picker(selection: $viewModel.userInfoResult, label: EmptyView(), content: {
+                Picker(selection: $viewModel.userInfoResult, label: EmptyView()) {
                     ForEach(ShimmerListViewModel.UserInfoResult.allCases, id: \.rawValue) { result in
                         Text(result.description).tag(result)
                     }
-                })
+                }
                 .pickerStyle(SegmentedPickerStyle())
                 .padding()
+                .background(Color.gray100)
                 
-                AsyncContentsList(loadingState: viewModel.loadingState,
-                                  content: ShimmerListContentsView.init(items:),
-                                  empty: {
-                                    ShimmerListEmptyView(message: "There are no news items",
-                                                         image: "exclamationmark.bubble")
-                                  },
-                                  error: {
-                                    ShimmerListEmptyView(message: $0.localizedDescription,
-                                                         image: "exclamationmark.triangle")
-                                        .foregroundColor(.red)
-                                  })
+                AsyncContentsList(
+                    loadingState: viewModel.loadingState,
+                    content: ShimmerListContentsView.init(items:),
+                    empty: {
+                        ShimmerListEmptyView(message: "There are no news items",
+                                             image: "exclamationmark.bubble")
+                    },
+                    error: {
+                        ShimmerListEmptyView(message: $0.localizedDescription,
+                                             image: "exclamationmark.triangle")
+                        .foregroundColor(.red)
+                    })
             }
-            .onAppear(perform: {
+            .onAppear {
                 viewModel.reload()
-            })
+            }
         }
     }
 }

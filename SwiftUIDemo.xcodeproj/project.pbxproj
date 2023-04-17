@@ -125,6 +125,7 @@
 		68EA0C1E29E341FA00EDF40E /* CarouselList+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA0C1D29E341FA00EDF40E /* CarouselList+.swift */; };
 		68EA0C2029E3437F00EDF40E /* CarouselList+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA0C1F29E3437F00EDF40E /* CarouselList+Model.swift */; };
 		68EA0C2329E345FF00EDF40E /* TitleViewComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA0C2229E345FF00EDF40E /* TitleViewComponents.swift */; };
+		68EA957729ED8A09009D7F39 /* ShimmerEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68EA957629ED8A09009D7F39 /* ShimmerEffectView.swift */; };
 		68F7A4A429E0649F00608AC9 /* CustomCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7A4A329E0649F00608AC9 /* CustomCarousel.swift */; };
 		68F7A4A829E0672200608AC9 /* VerticalCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7A4A729E0672200608AC9 /* VerticalCarouselView.swift */; };
 		68F7A4AA29E067E600608AC9 /* VerticalCarouselList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68F7A4A929E067E600608AC9 /* VerticalCarouselList.swift */; };
@@ -284,6 +285,7 @@
 		68EA0C1D29E341FA00EDF40E /* CarouselList+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselList+.swift"; sourceTree = "<group>"; };
 		68EA0C1F29E3437F00EDF40E /* CarouselList+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselList+Model.swift"; sourceTree = "<group>"; };
 		68EA0C2229E345FF00EDF40E /* TitleViewComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewComponents.swift; sourceTree = "<group>"; };
+		68EA957629ED8A09009D7F39 /* ShimmerEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffectView.swift; sourceTree = "<group>"; };
 		68F7A4A329E0649F00608AC9 /* CustomCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCarousel.swift; sourceTree = "<group>"; };
 		68F7A4A729E0672200608AC9 /* VerticalCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCarouselView.swift; sourceTree = "<group>"; };
 		68F7A4A929E067E600608AC9 /* VerticalCarouselList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCarouselList.swift; sourceTree = "<group>"; };
@@ -574,6 +576,7 @@
 			children = (
 				686D682026F1FC82008F36D5 /* ShimmeringView.swift */,
 				684A4D4A26FC892700BA61A0 /* BlurEffectView.swift */,
+				68EA957629ED8A09009D7F39 /* ShimmerEffectView.swift */,
 			);
 			path = VisualEffect;
 			sourceTree = "<group>";
@@ -973,6 +976,7 @@
 				689EFC1D29B3D0F60045732E /* TruncatedTextView.swift in Sources */,
 				68AD282929B91F36001577F9 /* SafeAreaView+Keyboard.swift in Sources */,
 				686437C2297083B300FA4C31 /* CoreDataTest.xcdatamodeld in Sources */,
+				68EA957729ED8A09009D7F39 /* ShimmerEffectView.swift in Sources */,
 				686438012970852C00FA4C31 /* CoreDataTestView.swift in Sources */,
 				68FA21E329B51097002DA536 /* MaskListView.swift in Sources */,
 				6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */,
@@ -1159,7 +1163,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1214,7 +1218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1234,7 +1238,7 @@
 				DEVELOPMENT_TEAM = SH989XXM7S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1257,7 +1261,7 @@
 				DEVELOPMENT_TEAM = SH989XXM7S;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SwiftUIDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
