@@ -35,8 +35,8 @@ extension CarouselList {
             GeometryReader { proxy in
                 let height = proxy.size.height - (trailingSpace - spacing)
                 let adjustMentHeight: CGFloat = 0
+//                let adjustMentHeight: CGFloat = (trailingSpace / 2) - spacing
                 
-                //VStack(spacing: spacing) {
                 VStack(spacing: spacing) {
                     ForEach(list) { item in
                         self.content(item)

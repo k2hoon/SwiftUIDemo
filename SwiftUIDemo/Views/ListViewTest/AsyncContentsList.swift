@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 extension Publisher where Output: Collection {
-    public func mapToLoadingState(placeholder: Output) -> AnyPublisher<AsnycContentsState<Output>, Never> {
+    func mapToLoadingState(placeholder: Output) -> AnyPublisher<AsnycContentsState<Output>, Never> {
         map {
             $0.isEmpty ? AsnycContentsState.empty : .loaded(content: $0)
         }
@@ -35,22 +35,21 @@ struct AsyncContentsList<Item, Content: View, EmptyView: View, ErrorView: View>:
     private let makeEmpty: () -> EmptyView
     private let makeError: (Error) -> ErrorView
     
-    public init(loadingState: AsnycContentsState<[Item]>,
-                @ViewBuilder content: @escaping ([Item]) -> Content,
-                @ViewBuilder empty: @escaping () -> EmptyView,
-                @ViewBuilder error: @escaping (Error) -> ErrorView) {
+    init(loadingState: AsnycContentsState<[Item]>,
+         @ViewBuilder content: @escaping ([Item]) -> Content,
+         @ViewBuilder empty: @escaping () -> EmptyView,
+         @ViewBuilder error: @escaping (Error) -> ErrorView) {
         state = loadingState
         makeContent = content
         makeEmpty = empty
         makeError = error
     }
     
-    public var body: some View {
+    var body: some View {
         switch state {
         case let .loading(placeholders):
             makeContent(placeholders)
                 .redacted(reason: .placeholder)
-                //.shimmering()
                 .shimmer()
                 .disabled(true)
                 .transition(fade)
