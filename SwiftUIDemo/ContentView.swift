@@ -6,84 +6,92 @@
 //
 
 import SwiftUI
+import UIKit
+
+extension UINavigationController: UINavigationControllerDelegate, UIGestureRecognizerDelegate {
+    open override func viewDidLoad() {
+        super.viewDidLoad()
+        self.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
+
+class AppEnvrionment: ObservableObject {
+    @Published var output = ""
+    @Published var toggle = false
+}
 
 struct ContentView: View {
-    enum ViewType: String, CaseIterable {
-        case webLink = "WebLink TestView"
-        case attributedString = "AttributedString test"
-        case alert = "AlertTestActive test"
-        case cacheImage = "Cache Image List test"
-        case combine = "CombineTest test"
-        case coreData = "Core Data test"
-        case json = "JSON test"
-        case segment = "Segment picker test"
-        case tab = "Tab header test"
-        case navigationTab = "Navigation tab test"
-        case navigationSearch = "Navigation search test"
-        case layout = "Layout test"
-        case dataflow = "Data flow test"
-        case dataflow2 = "Data flow2 test"
-        case gradients = "Gradients Test"
-        case mask = "Mask Test"
-        case maskLit = "Mask List Test"
-        case material = "Material Test"
-        case truncaeText = "Truncate Test"
-        case tagControl = "Tag Control Test"
-        case tagList = "Tag List Test"
+    @StateObject var appEnv = AppEnvrionment()
+    @State var tabSelection = 0
+    @State private var headerHeight: CGFloat = 0
+    
+    init() {
+        let appearance = UITabBarAppearance()
+        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
+        appearance.backgroundColor = UIColor(Color.white.opacity(0.1))
         
-        @ViewBuilder func viewBuilder() -> some View {
-            switch self {
-            case .webLink: WebLinkTestView()
-            case .attributedString: AttributedStringTestView()
-            case .alert: AlertViewTextView()
-            case .cacheImage: CachedImageListView()
-            case .combine: CombineTestView()
-            case .coreData: CoreDataTestView()
-            case .json: JsonView()
-            case .segment: SegmentPickerTestView()
-            case .tab: TabHeaderTestView()
-            case .navigationTab: NavigationTabView()
-            case .navigationSearch: NavigationSearchTestView()
-            case .layout: LayoutTestView()
-            case .dataflow: DataFlowTestView()
-            case .dataflow2: DataFlowTest2View()
-            case .gradients: GradientsView()
-            case .mask: MaskView()
-            case .maskLit: MaskListView()
-            case .material: MaterialView()
-            case .truncaeText: TruncatedTextView()
-            case .tagControl: TagControlView()
-            case .tagList: TagListTestView()
+        UITabBar.appearance().standardAppearance = appearance
+        UITabBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
+    var body: some View {
+        GeometryReader { proxy in
+            NavigationView {
+                ZStack(alignment: .top) {
+                    MainHeaderView()
+                        .viewSize{ size in self.headerHeight = size.height }
+                        .zIndex(1)
+                    
+                    TabView(selection: $tabSelection) {
+                        BasicView()
+                            .tabItem { Label("Basic", systemImage: "square.filled.on.square") }
+                            .tag(0)
+                        
+                        GraphicsView()
+                            .tabItem { Label("Graphics", systemImage: "star.square.fill") }
+                            .tag(1)
+                        
+                        AdvancedView()
+                            .tabItem { Label("Advanced", systemImage: "square.stack.fill") }
+                            .tag(2)
+                        
+                        TestingView()
+                            .tabItem{ Label("Testing", systemImage: "exclamationmark.square") }
+                            .tag(3)
+                        
+                        SettingsView()
+                            .tabItem { Label("Settings", systemImage: "gearshape") }
+                            .tag(4)
+                    }
+                    .padding(.top, self.headerHeight + 12)
+                    .environmentObject(self.appEnv)
+                }
             }
         }
     }
     
-    var body: some View {
-        NavigationView {
-            VStack {
-                Text("Hello. This is SwiftUI Collection")
-                    .font(.headline)
-                    .padding()
+    struct MainHeaderView: View {
+        var body: some View {
+            HStack {
+                Spacer()
                 
-                Text("Thia app is designed to provide a collection of test views using SwiftUI framework.")
-                    .multilineTextAlignment(.leading)
-                    .padding(.horizontal, 16)
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+                Text("SwiftUI Demo")
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(.primary)
+                    .kerning(0.5)
                 
-                Divider()
-                
-                List {
-                    ForEach(ViewType.allCases, id: \.self) { view in
-                        NavigationLink(view.rawValue) {
-                            view.viewBuilder()
-                        }
-                    }
-                }
+                Spacer()
             }
-            .navigationViewStyle(.stack)
-            .navigationTitle("")
-            .navigationBarHidden(true)
+            .padding(.horizontal)
+            .padding(.vertical, 8)
+            .overlay(alignment: .bottom) {
+                Divider()
+            }
         }
     }
 }

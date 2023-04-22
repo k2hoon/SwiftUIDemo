@@ -15,11 +15,6 @@ struct SwiftUIDemoApp: App {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-//            NavigationTabView()
-//            JsonView()
-//            TabHeaderTestView()
-//            SegmentPickerTestView()
-//            NavigationSearchTestView()
         }
     }
 }
