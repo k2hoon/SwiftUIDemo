@@ -51,6 +51,7 @@ extension AdvancedView {
         case navigationSearch = "Navigation search test"
         case dataflow = "Data flow test"
         case dataflow2 = "Data flow2 test"
+        case dataflow3 = "Data flow3 test"
         case truncaeText = "Truncate Test"
         case tagControl = "Tag Control Test"
         case tagList = "Tag List Test"
@@ -67,7 +68,8 @@ extension AdvancedView {
             case .navigationTab: NavigationTabView()
             case .navigationSearch: NavigationSearchTestView()
             case .dataflow: DataFlowTestView()
-            case .dataflow2: DataFlowTest2View()
+            case .dataflow2: DataFlow2TestView()
+            case .dataflow3: DataFlow3TestView()
             case .truncaeText: TruncatedTextView()
             case .tagControl: TagControlView()
             case .tagList: TagListTestView()

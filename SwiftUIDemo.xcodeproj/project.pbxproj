@@ -28,6 +28,7 @@
 		6822CA5225FE5CE100120D13 /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6822CA5125FE5CE100120D13 /* SwiftUIDemoUITests.swift */; };
 		6824633026EE5DC800F31B5F /* AttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6824632F26EE5DC800F31B5F /* AttributedString+Extension.swift */; };
 		6824633226EE647600F31B5F /* DateFormatterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6824633126EE647600F31B5F /* DateFormatterView.swift */; };
+		682989A829FC508A0027B426 /* DataFlow3TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 682989A729FC508A0027B426 /* DataFlow3TestView.swift */; };
 		68321414276E5EC9003860CB /* SegmentPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68321413276E5EC9003860CB /* SegmentPickerView.swift */; };
 		68321416276E6B64003860CB /* TabHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68321415276E6B64003860CB /* TabHeaderView.swift */; };
 		683678DF271B35FA005433B0 /* NavigationTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683678DE271B35FA005433B0 /* NavigationTestView.swift */; };
@@ -115,7 +116,7 @@
 		68A7FD6A29F4455200BD918D /* ButtonTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7FD6929F4455200BD918D /* ButtonTestView.swift */; };
 		68A7FD6C29F4455F00BD918D /* TextTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7FD6B29F4455F00BD918D /* TextTestView.swift */; };
 		68A7FD6F29F4526700BD918D /* TestingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A7FD6E29F4526700BD918D /* TestingView.swift */; };
-		68A84C1F298F4029008909C7 /* DataFlowTest2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A84C1E298F4029008909C7 /* DataFlowTest2View.swift */; };
+		68A84C1F298F4029008909C7 /* DataFlow2TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A84C1E298F4029008909C7 /* DataFlow2TestView.swift */; };
 		68A84C21298F4045008909C7 /* DataFlowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A84C20298F4045008909C7 /* DataFlowViewModel.swift */; };
 		68ACF9D326AB341400929157 /* ViewModifierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68ACF9D226AB341400929157 /* ViewModifierView.swift */; };
 		68AD282929B91F36001577F9 /* SafeAreaView+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */; };
@@ -198,6 +199,7 @@
 		6822CA5325FE5CE100120D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6824632F26EE5DC800F31B5F /* AttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AttributedString+Extension.swift"; sourceTree = "<group>"; };
 		6824633126EE647600F31B5F /* DateFormatterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterView.swift; sourceTree = "<group>"; };
+		682989A729FC508A0027B426 /* DataFlow3TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlow3TestView.swift; sourceTree = "<group>"; };
 		68321413276E5EC9003860CB /* SegmentPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentPickerView.swift; sourceTree = "<group>"; };
 		68321415276E6B64003860CB /* TabHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabHeaderView.swift; sourceTree = "<group>"; };
 		683678DE271B35FA005433B0 /* NavigationTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTestView.swift; sourceTree = "<group>"; };
@@ -285,7 +287,7 @@
 		68A7FD6929F4455200BD918D /* ButtonTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTestView.swift; sourceTree = "<group>"; };
 		68A7FD6B29F4455F00BD918D /* TextTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTestView.swift; sourceTree = "<group>"; };
 		68A7FD6E29F4526700BD918D /* TestingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingView.swift; sourceTree = "<group>"; };
-		68A84C1E298F4029008909C7 /* DataFlowTest2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowTest2View.swift; sourceTree = "<group>"; };
+		68A84C1E298F4029008909C7 /* DataFlow2TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlow2TestView.swift; sourceTree = "<group>"; };
 		68A84C20298F4045008909C7 /* DataFlowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowViewModel.swift; sourceTree = "<group>"; };
 		68ACF9D226AB341400929157 /* ViewModifierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifierView.swift; sourceTree = "<group>"; };
 		68AD282829B91F36001577F9 /* SafeAreaView+Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SafeAreaView+Keyboard.swift"; sourceTree = "<group>"; };
@@ -575,7 +577,8 @@
 			children = (
 				68A84C20298F4045008909C7 /* DataFlowViewModel.swift */,
 				685FBA41298C61A80064F914 /* DataFlowTestView.swift */,
-				68A84C1E298F4029008909C7 /* DataFlowTest2View.swift */,
+				68A84C1E298F4029008909C7 /* DataFlow2TestView.swift */,
+				682989A729FC508A0027B426 /* DataFlow3TestView.swift */,
 			);
 			path = DataFlowTest;
 			sourceTree = "<group>";
@@ -1051,7 +1054,7 @@
 				6806132426D4D37700944E1E /* GeometryReaderTestView.swift in Sources */,
 				6874036D26CF9ABA00C44AB4 /* BottomSheet.swift in Sources */,
 				68C26F29277B52C2006DCA4F /* SearchNavigationTestView.swift in Sources */,
-				68A84C1F298F4029008909C7 /* DataFlowTest2View.swift in Sources */,
+				68A84C1F298F4029008909C7 /* DataFlow2TestView.swift in Sources */,
 				6806132E26D4F92F00944E1E /* Alert+TextLink.swift in Sources */,
 				68AD282D29B927A0001577F9 /* SafeAreaInsetView.swift in Sources */,
 				686D683326F2357A008F36D5 /* EnvironmentValues+ImageCache.swift in Sources */,
@@ -1096,6 +1099,7 @@
 				684A4D4B26FC892700BA61A0 /* BlurEffectView.swift in Sources */,
 				686CE7A229F30F5500DE4675 /* BasicCollection.swift in Sources */,
 				68EA0C1E29E341FA00EDF40E /* CarouselList+.swift in Sources */,
+				682989A829FC508A0027B426 /* DataFlow3TestView.swift in Sources */,
 				686D681D26F1F8C4008F36D5 /* ImageListRowView.swift in Sources */,
 				686D682A26F1FFE3008F36D5 /* ShimmerListEmptyView.swift in Sources */,
 				68B8CCFC2958B46D004ECB8E /* PinchZoomTestView.swift in Sources */,

@@ -19,13 +19,7 @@ extension UINavigationController: UINavigationControllerDelegate, UIGestureRecog
     }
 }
 
-class AppEnvrionment: ObservableObject {
-    @Published var output = ""
-    @Published var toggle = false
-}
-
 struct ContentView: View {
-    @StateObject var appEnv = AppEnvrionment()
     @State var tabSelection = 0
     @State private var headerHeight: CGFloat = 0
     
@@ -68,7 +62,6 @@ struct ContentView: View {
                             .tag(4)
                     }
                     .padding(.top, self.headerHeight + 12)
-                    .environmentObject(self.appEnv)
                 }
             }
         }
