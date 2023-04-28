@@ -1,5 +1,5 @@
 //
-//  DataFlowTest2View.swift
+//  DataFlow2TestView.swift
 //  SwiftUIDemo
 //
 //  Created by k2hoon on 2023/02/05.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DataFlowTest2View: View {
+struct DataFlow2TestView: View {
     @StateObject var viewModel = DataFlowViewModel()
     
     var body: some View {
@@ -85,12 +85,12 @@ struct DataFlowTest2View: View {
 
 struct DataFlowTest2View_Previews: PreviewProvider {
     static var previews: some View {
-        DataFlowTest2View()
+        DataFlow2TestView()
     }
 }
 
 // MARK: Observed sub view
-extension DataFlowTest2View {
+extension DataFlow2TestView {
     struct ObservedView: View {
         @ObservedObject var viewModel: DataFlowViewModel
         
@@ -119,7 +119,7 @@ extension DataFlowTest2View {
 }
 
 // MARK: Environment sub view
-extension DataFlowTest2View {
+extension DataFlow2TestView {
     struct EnvironmentView: View {
         @EnvironmentObject private var viewModel: DataFlowViewModel
         
