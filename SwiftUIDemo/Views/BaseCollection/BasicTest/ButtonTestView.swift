@@ -34,6 +34,7 @@ extension ButtonTestView {
             VStack {
                 Text("Default")
                     .font(.title3)
+                    .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 16)
                 
@@ -64,6 +65,7 @@ extension ButtonTestView {
             VStack {
                 Text("Button border and stroke")
                     .font(.title3)
+                    .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 16)
                 
@@ -107,6 +109,7 @@ extension ButtonTestView {
             VStack {
                 Text("Button clipshape")
                     .font(.title3)
+                    .bold()
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 16)
                 
