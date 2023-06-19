@@ -53,20 +53,20 @@ struct AlertViewTextView: View {
                 // Toggle Alert
                 Button(action: { self.isShowAlert.toggle() },
                        label: { Text("SwiftUI Alert") })
-                    .alert(isPresented: $isShowAlert) {
-                        Alert(title: Text("Title"),
-                              message: Text("message"),
-                              dismissButton: .none)
-                    }
+                .alert(isPresented: $isShowAlert) {
+                    Alert(title: Text("Title"),
+                          message: Text("message"),
+                          dismissButton: .none)
+                }
                 
                 // Toggle Alert another
                 Button(action: { self.isShowAlertOther.toggle() },
                        label: { Text("SwiftUI Alert (another)") })
-                    .alert(isPresented: $isShowAlertOther) {
-                        Alert(title: Text("Title"),
-                              message: Text("message (another)"),
-                              dismissButton: .none)
-                    }
+                .alert(isPresented: $isShowAlertOther) {
+                    Alert(title: Text("Title"),
+                          message: Text("message (another)"),
+                          dismissButton: .none)
+                }
                 
                 // Toggle Alert Text Field
                 Button(action: {
@@ -81,13 +81,13 @@ struct AlertViewTextView: View {
                 }, label: {
                     Text("Custom Alert")
                 })
-//                .alert(isPresented: $showCustomAlert,
-//                       AlertField(title: AlertField.Title(text: "hello", color: UIColor.white),
-//                                  message: AlertField.Message(text: "world!", color: UIColor.white),
-//                                  background: AlertField.Background(color: UIColor.gray, alpha: 0.7),
-//                                  action: { action in
-//
-//                                  }))
+                //                .alert(isPresented: $showCustomAlert,
+                //                       AlertField(title: AlertField.Title(text: "hello", color: UIColor.white),
+                //                                  message: AlertField.Message(text: "world!", color: UIColor.white),
+                //                                  background: AlertField.Background(color: UIColor.gray, alpha: 0.7),
+                //                                  action: { action in
+                //
+                //                                  }))
                 
                 // Toggle Alert Text Link
                 Button(action: {
@@ -102,12 +102,12 @@ struct AlertViewTextView: View {
                                                message: self.attributedLinkString,
                                                accept: "Accept", cancel: nil,
                                                action: {
-                                                
-                                               },
+                    
+                },
                                                secondaryActionTitle: "Deny",
                                                secondaryAction: {
-                                                
-                                               }))
+                    
+                }))
             }
             
         }
@@ -116,15 +116,15 @@ struct AlertViewTextView: View {
                 title: "type message",
                 message: "transferred over https",
                 keyboardType: .default) { result in
-                if let text = result {
-                    guard let data = text.data(using: .utf8) else {
-                        return
+                    if let text = result {
+                        guard let data = text.data(using: .utf8) else {
+                            return
+                        }
+                        print(data)
+                    } else {
+                        print("maybe canceled...")
                     }
-                    print(data)
-                } else {
-                    print("maybe canceled...")
-                }
-               })
+                })
     }
 }
 

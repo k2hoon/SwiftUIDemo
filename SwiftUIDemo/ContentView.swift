@@ -6,18 +6,6 @@
 //
 
 import SwiftUI
-import UIKit
-
-extension UINavigationController: UINavigationControllerDelegate, UIGestureRecognizerDelegate {
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-        self.interactivePopGestureRecognizer?.delegate = self
-    }
-    
-    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return viewControllers.count > 1
-    }
-}
 
 struct ContentView: View {
     @State var tabSelection = 0
@@ -41,8 +29,8 @@ struct ContentView: View {
                         .zIndex(1)
                     
                     TabView(selection: $tabSelection) {
-                        BasicView()
-                            .tabItem { Label("Basic", systemImage: "square.filled.on.square") }
+                        BaseView()
+                            .tabItem { Label("Base", systemImage: "square.filled.on.square") }
                             .tag(0)
                         
                         GraphicsView()
@@ -53,13 +41,9 @@ struct ContentView: View {
                             .tabItem { Label("Advanced", systemImage: "square.stack.fill") }
                             .tag(2)
                         
-                        TestingView()
-                            .tabItem{ Label("Testing", systemImage: "exclamationmark.square") }
+                        CoreDataView()
+                            .tabItem{ Label("CoreData", systemImage: "exclamationmark.square") }
                             .tag(3)
-                        
-                        SettingsView()
-                            .tabItem { Label("Settings", systemImage: "gearshape") }
-                            .tag(4)
                     }
                     .padding(.top, self.headerHeight + 12)
                 }

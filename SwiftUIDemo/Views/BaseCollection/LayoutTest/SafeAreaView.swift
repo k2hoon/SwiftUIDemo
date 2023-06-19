@@ -13,7 +13,7 @@ struct SafeAreaView: View {
         NavigationView {
             ZStack {
                 LinearGradient(
-                    colors: [.blue, .teal],
+                    colors: [.gray, .teal],
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing
                 )

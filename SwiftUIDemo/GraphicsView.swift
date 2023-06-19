@@ -24,16 +24,15 @@ struct GraphicsView: View {
                                 .font(.callout)
                                 .padding()
                                 .frame(maxWidth: .infinity)
-                                .frame(height: 250)
+                                .frame(height: 150)
                                 .background(.white)
                                 .padding(.horizontal, 12)
-                                .cornerRadius(16)
-                                .shadow(color: .black.opacity(0.25), radius: 6)
+                                .cornerRadius(8)
+                                .shadow(color: .black.opacity(0.25), radius: 6, x: 4, y: 4)
                         }
                     }
                 }
             }
-            .padding(.top, 8)
         }
     }
 }

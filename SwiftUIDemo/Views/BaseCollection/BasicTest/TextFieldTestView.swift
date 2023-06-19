@@ -20,9 +20,9 @@ extension View {
 
 struct TextFieldTestView: View {
     @State var textFieldString = ""
-    
     @State var textFieldString2 = ""
     @State var textFieldHint = "Text field hint"
+    
     var body: some View {
         ZStack {
             Color.gray
