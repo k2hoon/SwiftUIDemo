@@ -11,7 +11,7 @@ struct AdvancedView: View {
     
     var body: some View {
         VStack {
-            Text("Thia app is designed to provide a collection of test views using SwiftUI framework.")
+            Text("Thia is designed to provide a collection of custom views using SwiftUI framework.")
                 .multilineTextAlignment(.leading)
                 .padding(.horizontal, 16)
                 .font(.subheadline)
@@ -43,7 +43,6 @@ extension AdvancedView {
         case attributedString = "AttributedString test"
         case alert = "AlertTestActive test"
         case cacheImage = "Cache Image List test"
-        case combine = "CombineTest test"
         case coreData = "Core Data test"
         case segment = "Segment picker test"
         case tab = "Tab header test"
@@ -55,13 +54,13 @@ extension AdvancedView {
         case truncaeText = "Truncate Test"
         case tagControl = "Tag Control Test"
         case tagList = "Tag List Test"
+        case imageZoom = "Image Zoom Test"
         
         @ViewBuilder func viewBuilder() -> some View {
             switch self {
             case .attributedString: AttributedStringTestView()
             case .alert: AlertViewTextView()
             case .cacheImage: CachedImageListView()
-            case .combine: CombineTestView()
             case .coreData: CoreDataTestView()
             case .segment: SegmentPickerTestView()
             case .tab: TabHeaderTestView()
@@ -73,6 +72,7 @@ extension AdvancedView {
             case .truncaeText: TruncatedTextView()
             case .tagControl: TagControlView()
             case .tagList: TagListTestView()
+            case .imageZoom: PinchZoomTestView()
             }
         }
     }

@@ -31,6 +31,8 @@ struct OtherCollection: View {
                 }
                 .padding()
             }
+            
+            Divider()
         }
     }
     

@@ -11,7 +11,7 @@ struct ScrollViewTestView: View {
     @Namespace var topID
     @Namespace var bottomID
     
-    let scrollBounceFixed: Bool
+    var scrollBounceFixed: Bool = true
     
     var body: some View {
         ScrollViewReader { proxy in

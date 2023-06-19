@@ -1,5 +1,5 @@
 //
-//  BasicView.swift
+//  BaseView.swift
 //  SwiftUIDemo
 //
 //  Created by k2hoon on 2023/04/22.
@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct BasicView: View {
+struct BaseView: View {
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -16,6 +17,10 @@ struct BasicView: View {
                 FontCollection()
                 
                 LayoutCollection()
+                
+                NavigationCollection()
+                
+                ScrollCollection()
                 
                 OtherCollection()
             }
@@ -26,7 +31,7 @@ struct BasicView: View {
 struct BasicView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            BasicView()
+            BaseView()
         }
     }
 }

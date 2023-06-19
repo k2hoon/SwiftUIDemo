@@ -1,5 +1,5 @@
 //
-//  BasicCollection.swift
+//  LayoutCollection.swift
 //  SwiftUIDemo
 //
 //  Created by k2hoon on 2023/04/22.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct BasicCollection: View {
+struct LayoutCollection: View {
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Basic")
+            Text("Layout")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.horizontal)
@@ -31,33 +31,34 @@ struct BasicCollection: View {
                 }
                 .padding()
             }
+            
+            Divider()
         }
     }
 }
 
-struct BasicCollection_Previews: PreviewProvider {
+struct LayoutCollection_Previews: PreviewProvider {
     static var previews: some View {
-        BasicCollection()
+        LayoutCollection()
     }
 }
 
-// MARK: BasicCollection
-extension BasicCollection {
+extension LayoutCollection {
     enum ViewType: String, CaseIterable {
-        case button = "Button test"
-        case text = "Text test"
-        case textField = "TextField test"
-        case viewbuilder = "ViewBuiler test"
-        case geometry = "GeometryReader test"
+        case `default` = "SafeArea test"
+        case inset = "SafeAreaInset test"
+        case vstack = "SafeArea VStack"
+        case keyboard = "SafeArea with keyboard"
+        case layout = "Layout test"
         
         
         @ViewBuilder func viewBuilder() -> some View {
             switch self {
-            case .button: ButtonTestView()
-            case .text: TextTestView()
-            case .textField: TextFieldTestView()
-            case .viewbuilder: ViewBuilderTestView()
-            case .geometry: GeometryReaderTestView()
+            case .default: SafeAreaView()
+            case .inset: SafeAreaInsetView()
+            case .vstack: SafeAreaView_VStack()
+            case .keyboard: SafeAreaView_Keyboard()
+            case .layout: LayoutTestView()
             }
         }
     }

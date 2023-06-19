@@ -1,16 +1,19 @@
 //
-//  BasicView+Font.swift
+//  ScrollCollection.swift
 //  SwiftUIDemo
 //
-//  Created by k2hoon on 2023/04/22.
+//  Created by k2hoon on 2023/06/19.
 //
 
 import SwiftUI
 
-struct FontCollection: View {
+struct ScrollCollection: View {
+    @State var selection: ViewType? = nil
+    @State var present = false
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Font")
+            Text("Scroll")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.horizontal)
@@ -18,7 +21,7 @@ struct FontCollection: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: 22) {
                     ForEach(ViewType.allCases, id: \.self) { view in
-                        NavigationLink(destination: { view.viewBuilder() }) {
+                        Button(action: { self.selection = view }) {
                             Text(view.rawValue)
                                 .font(.callout)
                                 .padding()
@@ -27,34 +30,35 @@ struct FontCollection: View {
                                 .cornerRadius(8)
                                 .shadow(color: .black.opacity(0.25), radius: 6, x: 4, y: 4)
                         }
+                        .sheet(isPresented: $present) {
+                            self.selection?.viewBuilder()
+                        }
                     }
-                    
                 }
                 .padding()
             }
+            .onChange(of: self.selection) { newValue in
+                self.present.toggle()
+            }
+            
+            Divider()
         }
     }
 }
 
-struct FontCollection_Previews: PreviewProvider {
+struct ScrollCollection_Previews: PreviewProvider {
     static var previews: some View {
-        FontCollection()
+        ScrollCollection()
     }
 }
 
-extension FontCollection {
+extension ScrollCollection {
     enum ViewType: String, CaseIterable {
-        case test = "Font test"
-        case weight = "Font weight"
-        case design = "Font design"
-        case style = "Font style"
+        case `default` = "ScrollView test"
         
         @ViewBuilder func viewBuilder() -> some View {
             switch self {
-            case .test: FontTestView()
-            case .weight: FontWeightView()
-            case .design: FontDesignView()
-            case .style: FontTextStyle()
+            case .default: ScrollViewTestView()
             }
         }
     }
