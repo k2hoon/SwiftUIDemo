@@ -403,10 +403,6 @@
 				68372DEB26B462F9003B313A /* Fonts */,
 				6822CA3425FE5CE000120D13 /* SwiftUIDemoApp.swift */,
 				6822CA3625FE5CE000120D13 /* ContentView.swift */,
-				686CE79429F2EC2000DE4675 /* BaseView.swift */,
-				686CE79629F2EDC600DE4675 /* GraphicsView.swift */,
-				686CE79829F2EDF800DE4675 /* AdvancedView.swift */,
-				68A7FD6E29F4526700BD918D /* CoreDataView.swift */,
 				6822CA3825FE5CE100120D13 /* Assets.xcassets */,
 				6822CA3D25FE5CE100120D13 /* Info.plist */,
 				6822CA3A25FE5CE100120D13 /* Preview Content */,
@@ -585,9 +581,34 @@
 			path = DataFlowTest;
 			sourceTree = "<group>";
 		};
+		6860CE852A7A95A3004C4F0D /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				680BBBC927231B4200E61763 /* PathTestView.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		6860CE862A7A95AE004C4F0D /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+				68A6F95D2A4F4D4800F9C75D /* CoordinateSpaceView.swift */,
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
+		6860CE872A7A95E3004C4F0D /* PreferenceTest */ = {
+			isa = PBXGroup;
+			children = (
+				68A6F95F2A4F58BD00F9C75D /* PreferenceView.swift */,
+			);
+			path = PreferenceTest;
+			sourceTree = "<group>";
+		};
 		686CE79C29F3091100DE4675 /* BaseCollection */ = {
 			isa = PBXGroup;
 			children = (
+				686CE79429F2EC2000DE4675 /* BaseView.swift */,
 				68A7FD6D29F4456C00BD918D /* BasicTest */,
 				68A5F5DF26E79E1200ED019A /* FontTest */,
 				68BF86DB27E2A36400119D93 /* LayoutTest */,
@@ -759,11 +780,11 @@
 		68A7FD6629F441A500BD918D /* GraphicsCollection */ = {
 			isa = PBXGroup;
 			children = (
+				686CE79629F2EDC600DE4675 /* GraphicsView.swift */,
 				689EFC1929B3CC340045732E /* Graphics */,
-				680BBBC927231B4200E61763 /* PathTestView.swift */,
+				6860CE852A7A95A3004C4F0D /* Shapes */,
 				686D682426F1FF13008F36D5 /* VisualEffect */,
-				68A6F95D2A4F4D4800F9C75D /* CoordinateSpaceView.swift */,
-				68A6F95F2A4F58BD00F9C75D /* PreferenceView.swift */,
+				6860CE862A7A95AE004C4F0D /* Measurement */,
 			);
 			path = GraphicsCollection;
 			sourceTree = "<group>";
@@ -771,6 +792,7 @@
 		68A7FD6729F441B300BD918D /* AdvancedCollection */ = {
 			isa = PBXGroup;
 			children = (
+				686CE79829F2EDF800DE4675 /* AdvancedView.swift */,
 				689EE38E2A40951100C60116 /* TextTest */,
 				68149CE2277223A700CAEDA1 /* TabViewTest */,
 				686D683126F23108008F36D5 /* ListViewTest */,
@@ -780,6 +802,7 @@
 				685FBA43298C61AE0064F914 /* DataFlowTest */,
 				68B8CCFD2958B599004ECB8E /* ZoomTest */,
 				6824632B26EE381D00F31B5F /* AlertTest */,
+				6860CE872A7A95E3004C4F0D /* PreferenceTest */,
 			);
 			path = AdvancedCollection;
 			sourceTree = "<group>";
@@ -861,6 +884,7 @@
 		68D610E82972F82F00275E11 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				68A7FD6E29F4526700BD918D /* CoreDataView.swift */,
 				686437FE2970851300FA4C31 /* Persistence.swift */,
 				686438002970852C00FA4C31 /* CoreDataTestView.swift */,
 			);
