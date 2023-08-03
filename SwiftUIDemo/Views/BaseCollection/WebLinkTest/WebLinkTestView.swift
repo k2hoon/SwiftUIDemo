@@ -11,60 +11,72 @@ import WebKit
 /// Test with moving to website using url
 /// see that link https://github.com/stleamist/BetterSafariView
 struct WebLinkTestView: View {
+    @Environment(\.dismiss) var dismiss
     @Environment(\.openURL) var openURL
     
     @State var showSFSafariSheet = false
     @State var showWebKitSheet = false
+    
     var body: some View {
-        VStack(spacing: 10) {
-            // Link view case 1
-            Link("Link to SwiftUI",
-                 destination: URL(string: "https://developer.apple.com/documentation/swiftui")!)
-            
-            // Link view case 2
-            Link("Link to Apple website", destination: URL(string: "https://www.apple.com")!)
-                .font(.title)
-                .foregroundColor(.black)
-            
-            // Link view case 3
-            Link(destination: URL(string: "https://www.apple.com")!) {
-                Image(systemName: "link.circle.fill")
-                    .font(.largeTitle)
-            }
-            
-            // using the openURL environment key
-            Button("Butto to Apple website") {
-                guard let url = URL(string: "https://www.apple.com") else {
-                    return
+        NavigationView {
+            VStack(spacing: 10) {
+                // Link view case 1
+                Link("Link to SwiftUI",
+                     destination: URL(string: "https://developer.apple.com/documentation/swiftui")!)
+                
+                // Link view case 2
+                Link("Link to Apple website", destination: URL(string: "https://www.apple.com")!)
+                    .font(.title)
+                    .foregroundColor(.black)
+                
+                // Link view case 3
+                Link(destination: URL(string: "https://www.apple.com")!) {
+                    Image(systemName: "link.circle.fill")
+                        .font(.largeTitle)
                 }
-                openURL(url)
-            }
-            
-            // using SFSafariViewController
-            Button(action: {
-                self.showSFSafariSheet.toggle()
-            }, label: {
-                Text("Button to Apple website(SFSafafi)")
-            })
-            .sheet(isPresented: $showSFSafariSheet, content: {
-                if let url = URL(string: "https://www.apple.com") {
-                    SafariView(url: url)
+                
+                // using the openURL environment key
+                Button("Butto to Apple website") {
+                    guard let url = URL(string: "https://www.apple.com") else {
+                        return
+                    }
+                    openURL(url)
                 }
-            })
-            
-            // uinsg WebKit
-            Button(action: {
-                self.showWebKitSheet.toggle()
-            }, label: {
-                Text("Button to open WebKit webview")
-            })
-            .sheet(isPresented: $showWebKitSheet, content: {
-                // TODO: Toolbar does not show and work... need to check in detail.
-                WebKitView()
-            })
-            //            .fullScreenCover(isPresented: $showSheets, content: {
-            //                WebKitView()
-            //            })
+                
+                // using SFSafariViewController
+                Button(action: {
+                    self.showSFSafariSheet.toggle()
+                }, label: {
+                    Text("Button to Apple website(SFSafafi)")
+                })
+                .sheet(isPresented: $showSFSafariSheet, content: {
+                    if let url = URL(string: "https://www.apple.com") {
+                        SafariView(url: url)
+                    }
+                })
+                
+                // uinsg WebKit
+                Button(action: {
+                    self.showWebKitSheet.toggle()
+                }, label: {
+                    Text("Button to open WebKit webview")
+                })
+                .sheet(isPresented: $showWebKitSheet, content: {
+                    // TODO: Toolbar does not show and work... need to check in detail.
+                    WebKitView()
+                })
+                //            .fullScreenCover(isPresented: $showSheets, content: {
+                //                WebKitView()
+                //            })
+            }
+            .navigationTitle("WebLink Test")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark")
+                    }
+                }
+            }
         }
     }
 }

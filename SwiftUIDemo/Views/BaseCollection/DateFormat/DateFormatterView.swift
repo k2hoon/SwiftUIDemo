@@ -41,6 +41,8 @@ extension DateFormatter {
 /// Date Formatter
 /// reference: https://developer.apple.com/documentation/foundation/dateformatter
 struct DateFormatterView: View {
+    @Environment(\.dismiss) var dismiss
+    
     let dateString = DateFormatter.mediumTimeFormatter.string(from: Date())
     var customDateString: String = ""
     
@@ -49,13 +51,23 @@ struct DateFormatterView: View {
     }
     
     var body: some View {
-        VStack {
-            Text("Hello, World!")
-            Text("\(dateString)")
-            Text("\(customDateString)")
-            Text("\(usingRFC3339DateFormatter())")
-            Text("\(usingISO8601DateFormatter())")
-            Text("\(timeSinceWithISO8601DateFormatter(since: "2021-06-15T00:58:04", from: "2021-06-13T01:04:06"))")
+        NavigationView {
+            VStack {
+                Text("Hello, World!")
+                Text("\(dateString)")
+                Text("\(customDateString)")
+                Text("\(usingRFC3339DateFormatter())")
+                Text("\(usingISO8601DateFormatter())")
+                Text("\(timeSinceWithISO8601DateFormatter(since: "2021-06-15T00:58:04", from: "2021-06-13T01:04:06"))")
+            }
+            .navigationTitle("Date Test")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark")
+                    }
+                }
+            }
         }
     }
     

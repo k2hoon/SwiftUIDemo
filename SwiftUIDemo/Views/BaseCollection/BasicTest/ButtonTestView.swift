@@ -8,15 +8,29 @@
 import SwiftUI
 
 struct ButtonTestView: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        VStack {
-            ButtonDefault()
-            
-            ButtonBorder()
-            
-            ButtonClipshape()
-            
-            Spacer()
+        NavigationView {
+            ScrollView {
+                VStack {
+                    ButtonDefault()
+                    
+                    ButtonBorder()
+                    
+                    ButtonClipshape()
+                    
+                    Spacer()
+                }
+            }
+            .navigationTitle("Button Test")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark")
+                    }
+                }
+            }
         }
     }
 }

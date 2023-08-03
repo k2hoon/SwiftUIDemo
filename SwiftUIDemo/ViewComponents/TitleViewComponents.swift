@@ -8,6 +8,29 @@
 import Foundation
 import SwiftUI
 
+struct TitleView: View {
+    var title: String
+    
+    var body: some View {
+        HStack {
+            Spacer()
+            
+            Text(self.title)
+                .font(.title3)
+                .fontWeight(.bold)
+                .foregroundColor(.primary)
+                .kerning(0.5)
+            
+            Spacer()
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 8)
+        .overlay(alignment: .bottom) {
+            Divider()
+        }
+    }
+}
+
 struct TitleBack: View {
     var title: String
     var spacing: CGFloat
