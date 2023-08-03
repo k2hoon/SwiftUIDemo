@@ -8,31 +8,25 @@
 import SwiftUI
 
 struct LayoutCollection: View {
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("Layout")
-                .font(.title2)
-                .fontWeight(.bold)
-                .padding(.horizontal)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(spacing: 22) {
-                    ForEach(ViewType.allCases, id: \.self) { view in
-                        NavigationLink(destination: { view.viewBuilder() }) {
-                            Text(view.rawValue)
-                                .font(.callout)
-                                .padding()
-                                .frame(width: 150, height: 150)
-                                .background(.white)
-                                .cornerRadius(8)
-                                .shadow(color: .black.opacity(0.25), radius: 6, x: 4, y: 4)
-                        }
+        NavigationView {
+            List {
+                ForEach(ViewType.allCases, id: \.self) { view in
+                    NavigationLink(view.rawValue) {
+                        view.viewBuilder()
                     }
                 }
-                .padding()
             }
-            
-            Divider()
+            .navigationTitle("Layout Test")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { self.dismiss() }) {
+                        Image(systemName: "xmark")
+                    }
+                }
+            }
         }
     }
 }

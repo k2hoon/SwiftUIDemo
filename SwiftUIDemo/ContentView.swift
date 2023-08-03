@@ -12,62 +12,36 @@ struct ContentView: View {
     @State private var headerHeight: CGFloat = 0
     
     init() {
-        let appearance = UITabBarAppearance()
-        appearance.backgroundEffect = UIBlurEffect(style: .systemUltraThinMaterial)
-        appearance.backgroundColor = UIColor(Color.white.opacity(0.1))
-        
-        UITabBar.appearance().standardAppearance = appearance
-        UITabBar.appearance().scrollEdgeAppearance = appearance
+        Theme.tabBarColors(background: UIColor(Color.white.opacity(0.1)), blurStyle: .systemUltraThinMaterial)
     }
     
     var body: some View {
-        GeometryReader { proxy in
-            NavigationView {
-                ZStack(alignment: .top) {
-                    MainHeaderView()
-                        .viewSize{ size in self.headerHeight = size.height }
-                        .zIndex(1)
+        NavigationView {
+            ZStack(alignment: .top) {
+                TitleView(title: "SwiftUI Demo")
+                    .viewSize{ size in self.headerHeight = size.height }
+                    .zIndex(1)
+                
+                TabView(selection: $tabSelection) {
+                    BaseView()
+                        .tabItem { Label("Base", systemImage: "square.filled.on.square") }
+                        .tag(0)
                     
-                    TabView(selection: $tabSelection) {
-                        BaseView()
-                            .tabItem { Label("Base", systemImage: "square.filled.on.square") }
-                            .tag(0)
-                        
-                        GraphicsView()
-                            .tabItem { Label("Graphics", systemImage: "star.square.fill") }
-                            .tag(1)
-                        
-                        AdvancedView()
-                            .tabItem { Label("Advanced", systemImage: "square.stack.fill") }
-                            .tag(2)
-                        
-                        CoreDataView()
-                            .tabItem{ Label("CoreData", systemImage: "exclamationmark.square") }
-                            .tag(3)
-                    }
-                    .padding(.top, self.headerHeight + 12)
+                    
+                    GraphicsView()
+                        .tabItem { Label("Graphics", systemImage: "star.square.fill") }
+                        .tag(1)
+                    
+                    
+                    AdvancedView()
+                        .tabItem { Label("Advanced", systemImage: "square.stack.fill") }
+                        .tag(2)
+                    
+                    CoreDataView()
+                        .tabItem{ Label("CoreData", systemImage: "exclamationmark.square") }
+                        .tag(3)
                 }
-            }
-        }
-    }
-    
-    struct MainHeaderView: View {
-        var body: some View {
-            HStack {
-                Spacer()
-                
-                Text("SwiftUI Demo")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .foregroundColor(.primary)
-                    .kerning(0.5)
-                
-                Spacer()
-            }
-            .padding(.horizontal)
-            .padding(.vertical, 8)
-            .overlay(alignment: .bottom) {
-                Divider()
+                .padding(.top, self.headerHeight + 12)
             }
         }
     }

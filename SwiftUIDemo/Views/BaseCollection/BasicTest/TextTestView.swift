@@ -8,30 +8,39 @@
 import SwiftUI
 
 struct TextTestView: View {
-    
-    
+    @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        ScrollView {
-            VStack {
-                TextDefault()
-                
-                TextTruncate()
-                
-                TextMultiLine()
-                
-                TextLineLimit()
-                
+        NavigationView {
+            ScrollView {
                 VStack {
-                    Text("Linespacing text")
-                        .font(.title3)
-                        .bold()
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 16)
+                    TextDefault()
                     
-                    Text("Lorem ipsum dolor sit amet, \n consectetur adipiscing elit.")
-                        .lineSpacing(10)
-                        .padding(.top, 8)
+                    TextTruncate()
+                    
+                    TextMultiLine()
+                    
+                    TextLineLimit()
+                    
+                    VStack {
+                        Text("Linespacing text")
+                            .font(.title3)
+                            .bold()
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.leading, 16)
+                        
+                        Text("Lorem ipsum dolor sit amet, \n consectetur adipiscing elit.")
+                            .lineSpacing(10)
+                            .padding(.top, 8)
+                    }
+                }
+            }
+            .navigationTitle("Text Test")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { dismiss() }) {
+                        Image(systemName: "xmark")
+                    }
                 }
             }
         }
